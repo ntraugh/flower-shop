@@ -20,3 +20,8 @@ const bouquetSchema = new mongoose.Schema({
         required: true,
     }
 })
+
+
+const Bouquet = mongoose.model("Bouquet", bouquetSchema)
+
+module.exports = Bouquet

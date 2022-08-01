@@ -1,4 +1,4 @@
-const { Schema, model, default: mongoose } = require("mongoose")
+const { Schema, model } = require("mongoose")
 
 const orderSchema = new mongoose.Schema ({
     Id: {
@@ -21,3 +21,7 @@ const orderSchema = new mongoose.Schema ({
     }
     
 })
+
+const Order = mongoose.model("Order", orderSchema)
+
+module.exports = Order;
