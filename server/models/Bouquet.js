@@ -1,6 +1,10 @@
 const { Schema, model, } = require("mongoose")
 
 const bouquetSchema = new mongoose.Schema({
+    description: {
+        type: String,
+        required: true,
+    },
     price: {
         type: Number,
         required: true,
@@ -15,5 +19,4 @@ const bouquetSchema = new mongoose.Schema({
         type: Boolean,
         required: true,
     }
-
 })
