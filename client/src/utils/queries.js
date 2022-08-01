@@ -1,18 +1,10 @@
+// queries
+
 import { gql } from '@apollo/client';
 
 export const QUERY_USERS = gql`
   query users {
     users {
-      _id
-      username
-      email
-    }
-  }
-`;
-
-export const QUERY_USER = gql`
-  query user($id: ID!) {
-    user(id: $id) {
       _id
       username
       email
@@ -28,4 +20,53 @@ export const QUERY_ME = gql`
       email
     }
   }
+`;
+
+export const QUERY_ALL_BOUQUETS = gql`
+query AllBouquets($occasionId: ID!) {
+  allBouquets(occasionId: $occasionId) {
+    name
+    description
+    image
+    price
+    featured
+    _id
+  }
+}
+`;
+
+export const QUERY_BOUQUET = gql`
+query Bouquet($bouquetId: ID!) {
+  bouquet(bouquetId: $bouquetId) {
+    name
+    description
+    image
+    price
+    featured
+    occasion {
+      name
+    }
+  }
+}`;
+
+export const QUERY_OCCASIONS = gql`
+query occasions {
+_id
+name
+description ?
+}`;
+
+
+
+export const QUERY_FEATURED = gql`
+query featured {
+  featured {
+    name
+    description
+    image
+    price
+    featured
+    _id
+  }
+}
 `;

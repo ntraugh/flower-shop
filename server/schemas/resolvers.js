@@ -22,7 +22,10 @@ const resolvers = {
     },
     bouquet: async (_, { bouquetId }) => {
       return Bouquet.findOne({ _id: bouquetId }).populate('occasion');;
-    }
+    },
+    featured: async () => {
+      return Bouquet.find({ featured: true }).populate('occasion');
+    },
   },
 
   Mutation: {
