@@ -29,13 +29,16 @@ function Navbar() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/About">About</Link>
+            <Link to="/login">Login</Link>
           </li>
           <li>
-            <Link to="/Project">Projects</Link>
+            <Link to="/signup">Sign up</Link>
           </li>
           <li>
-            <Link to="/Contact">Contact</Link>
+            <Link to="/me">Profile</Link>
+          </li>
+          <li>
+            <Link to="/occasion">Occasions</Link>
           </li>
         </ul>
         <div className="hamburger" onClick={handleClick}>
