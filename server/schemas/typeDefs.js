@@ -43,7 +43,10 @@ const typeDefs = gql`
     occasions: [Occasion]
     allBouquets(occasionId: ID!): [Bouquet]
     bouquet(bouquetId: ID!): Bouquet
+    featured: [Bouquet]
   }
+
+  
 
   type Mutation {
     addUser(email:String!, username:String!, password:String!): Auth
