@@ -5,15 +5,15 @@ import Navbar from '../Navbar';
 const Header = () => {
   return (
     <header>
-      <div>
+      <Navbar />
+      {/* <div>
         <Link to="/">
           <h1>User List</h1>
         </Link>
       </div>
       <div>
         <p>Simple App to View Users.</p>
-        <Navbar />
-      </div>
+      </div> */}
     </header>
   );
 };

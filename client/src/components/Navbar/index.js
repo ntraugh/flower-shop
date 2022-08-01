@@ -1,37 +1,78 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
-import Auth from '../../utils/auth';
+import { FaBars, FaTimes } from "react-icons/fa"
+// import Auth from '../../utils/auth';
+import "./NavbarStyle.css"
 
 function Navbar() {
-  const logout = (event) => {
-    event.preventDefault();
-    Auth.logout();
-  };
-  
-  if (Auth.loggedIn()) {
-    return (
-      <>
-        <Link to="/me">
-          {Auth.getProfile().data.username}'s profile
-        </Link>
-        <button onClick={logout}>
-          Logout
-        </button>
-      </>
-    );
+  const [click, setClick] = useState(false)
+  const handleClick = () => setClick(!click)
+
+  const [color, setColor] = useState(false)
+  const changeColor = () => {
+    if(window.scrollY >= 1){
+      setColor(true)
+    }else{
+      setColor(false)
+    }
   }
-  // If logged out show login controls
+ 
+ 
+  window.addEventListener("scroll", changeColor)
+
+
   return (
-    <>
-      <Link to="/login">
-        Login
-      </Link>
-      <Link to="/signup">
-        Signup
-      </Link>
-    </>
+    <div className={color ? "header header-bg" : "header"}>
+        {/* if else for hamburger menu */}
+        <ul className={click ? "nav-menu active" : "nav-menu"}>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/About">About</Link>
+          </li>
+          <li>
+            <Link to="/Project">Projects</Link>
+          </li>
+          <li>
+            <Link to="/Contact">Contact</Link>
+          </li>
+        </ul>
+        <div className="hamburger" onClick={handleClick}>
+          {click ? (<FaTimes size={20} style={{color: "white"}} />) 
+            : (<FaBars size={20} style={{color: "white"}} />)}
+        </div>
+    </div>
   )
 }
+  // If logged out show login controls
+  
+
+     // const logout = (event) => {
+  //   event.preventDefault();
+  //   Auth.logout();
+  // };
+  
+  // if (Auth.loggedIn()) {
+  //   return (
+  //     <>
+  //       <Link to="/me">
+  //         {Auth.getProfile().data.username}'s profile
+  //       </Link>
+  //       <button onClick={logout}>
+  //         Logout
+  //       </button>
+  //     </>
+  //   );
+  // }
+    // <>
+    //   <Link to="/login">
+    //     Login
+    //   </Link>
+    //   <Link to="/signup">
+    //     Signup
+    //   </Link>
+    // </>
+
 
 export default Navbar
