@@ -1,21 +1,26 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const { Schema } = require("mongoose")
 
 const bouquetSchema = new Schema({
+    name: {
+        type: String,
+        required: true,
+    },
     description: {
         type: String,
         required: true,
     },
     price: {
         type: Number,
-        required: true,
-        unique: true,
+        required: true
     },
-    occasion: {
+    image: {
         type: String,
-        requried: true,
-        unique: true,
     },
+    occasion: [{
+        type: Schema.Types.ObjectId,
+        ref: "Occasion"
+    }],
     featured: {
         type: Boolean,
         required: true,

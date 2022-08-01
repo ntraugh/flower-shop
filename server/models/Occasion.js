@@ -6,11 +6,11 @@ const occasionSchema = new Schema({
         type: String,
         required: true,
         unique: true,
-        bouquet: [{
-            type: Schema.Types.ObjectId,
-            ref: "Bouquet"
-        }]
+      
     },
+    image: {
+        type: String
+    }
 })
 
 const Occasion = mongoose.model ("Occasion", occasionSchema)

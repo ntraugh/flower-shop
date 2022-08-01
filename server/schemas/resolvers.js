@@ -5,32 +5,24 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
   Query: {
     users: async () => {
-      return User.find();
-    },
-    user: async (_, args) => {
-      return User.findOne({ _id: args.id });
+      const users = await User.find().populate('orders');
+      return users;
     },
     me: async (_, args, context) => {
       if (context.user) {
-        return User.findOne({ _id: context.user._id });
+        return User.findOne({ _id: context.user._id }).populate('orders');
       }
       throw new AuthenticationError('You need to be logged in!');
     },
-
-    bouquets: async () => {
-      return Bouquet.find();
-    },
-    bouquet: async (parent, args) => {
-      return Bouquet.findOne({ _id: args.id });
-    },
-
     occasions: async () => {
       return Occasion.find();
     },
-    occasion: async (parent, args) => {
-      return Occasion.findOne({ _id: args.id });
+    allBouquets: async (_, { occasionId }) => {
+      return Bouquet.find({ occasion: occasionId }).populate('occasion');
     },
-
+    bouquet: async (_, { bouquetId }) => {
+      return Bouquet.findOne({ _id: bouquetId }).populate('occasion');;
+    }
   },
 
   Mutation: {
