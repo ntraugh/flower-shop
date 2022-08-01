@@ -52,7 +52,7 @@ export const QUERY_OCCASIONS = gql`
 query occasions {
 _id
 name
-description ?
+description 
 }`;
 
 
