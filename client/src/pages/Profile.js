@@ -4,7 +4,7 @@ import { Navigate, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 // Utilities
 import Auth from '../utils/auth';
-import { QUERY_USERS, QUERY_USER, QUERY_ME } from '../utils/queries';
+import { QUERY_USERS, QUERY_ME } from '../utils/queries';
 // Components
 import UserList from '../components/UserList';
 
@@ -12,7 +12,7 @@ const Profile = () => {
   const { id } = useParams();
 
   // Get current user
-  const { loading, data, error } = useQuery(id ? QUERY_USER : QUERY_ME, {
+  const { loading, data, error } = useQuery(QUERY_ME, {
     variables: { id },
   });
 
