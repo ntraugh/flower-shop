@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User } = require('../models');
+const { User, Bouquet, Occasion, Order } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -16,6 +16,21 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
+
+    bouquets: async () => {
+      return Bouquet.find();
+    },
+    bouquet: async (parent, args) => {
+      return Bouquet.findOne({ _id: args.id });
+    },
+
+    occasions: async () => {
+      return Occasion.find();
+    },
+    occasion: async (parent, args) => {
+      return Occasion.findOne({ _id: args.id });
+    },
+
   },
 
   Mutation: {
