@@ -1,6 +1,7 @@
-const { Schema, model } = require("mongoose")
+const mongoose = require('mongoose');
+const { Schema } = require("mongoose");
 
-const orderSchema = new mongoose.Schema ({
+const orderSchema = new Schema({
     Id: {
         type: Schema.Types.ObjectId,
         required: true,
@@ -12,8 +13,8 @@ const orderSchema = new mongoose.Schema ({
         ]
     },
     purchaseDate: {
-        createdAt: {type: Date, default: Date.now},
-        required: true
+        type: Date, 
+        default: Date.now,
     },
     totalCost: {
         type: Number,
