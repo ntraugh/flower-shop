@@ -6,24 +6,29 @@ const typeDefs = gql`
     username: String
     email: String
     password: String
+    orders: [Order]
   }
 
   type Bouquet {
     _id: ID
+    name: String
     description: String
+    image: String
+    occasion: [Occasion]
     price: Float
-    occasion: String
     featured: Boolean 
   }
 
   type Occasion {
     name: String
+    image: String
   }
 
   type Order {
     _id: ID
     purchaseDate: String
     totalCost: Float
+    products: [Bouquet]
   }
 
   type Auth {
@@ -35,9 +40,9 @@ const typeDefs = gql`
     users: [User]
     user(id: ID!): User
     me: User
-    bouquets: [Bouquet]!
+    bouquets: [Bouquet]
     bouquet(bouquetId: ID!): Bouquet
-    occasions: [Occasion]!
+    occasions: [Occasion]
     occasion(occasionId: ID!): Occasion 
   }
 
