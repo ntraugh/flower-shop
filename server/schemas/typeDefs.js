@@ -20,6 +20,7 @@ const typeDefs = gql`
   }
 
   type Occasion {
+    _id: ID
     name: String
     image: String
   }
@@ -38,12 +39,10 @@ const typeDefs = gql`
 
   type Query {
     users: [User]
-    user(id: ID!): User
     me: User
-    bouquets: [Bouquet]
-    bouquet(bouquetId: ID!): Bouquet
     occasions: [Occasion]
-    occasion(occasionId: ID!): Occasion 
+    allBouquets(occasionId: ID!): [Bouquet]
+    bouquet(bouquetId: ID!): Bouquet
   }
 
   type Mutation {

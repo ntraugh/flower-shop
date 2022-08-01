@@ -10,11 +10,7 @@ const occasionSchema = new Schema({
     },
     image: {
         type: String
-    },
-    // bouquets: [{
-    //     type: Schema.Types.ObjectId,
-    //     ref: "Bouquet"
-    // }]
+    }
 })
 
 const Occasion = mongoose.model ("Occasion", occasionSchema)
