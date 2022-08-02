@@ -64,7 +64,6 @@ query featured {
     description
     image
     price
-    featured
     _id
   }
 }
