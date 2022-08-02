@@ -46,7 +46,7 @@ function Navbar() {
         </ul>
         <div className="hamburger" onClick={handleClick}>
           {click ? (<FaTimes size={20} style={{color: "white"}} />) 
-            : (<FaBars size={20} style={{color: "black"}} />)}
+            : (<FaBars size={20} style={{color: "rgb(242, 132, 130)"}} />)}
         </div>
     </div>
   )
