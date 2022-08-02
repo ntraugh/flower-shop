@@ -1,0 +1,25 @@
+.cardBody {
+    max-width: 90%;
+    padding: 2rem;
+}
+
+.cardBody img {
+    margin: auto;
+    border-radius: 0.5rem;
+    color: black;
+    filter: drop-shadow(.5rem .5rem .5rem rgb(242, 132, 130));
+}
+
+
+
+
+
+
+
+
+/* 
+@media screen and (max-width: 865px) {
+    .cardBody img{
+        width: 100%;
+    }
+} */
