@@ -1,12 +1,39 @@
 .singleBouquetContainer {
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
-/* .bouquetSingleName {
-
-} */
+.bouquetSingleName {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
 
 .bouquetSingleImg {
     height: 300px;
+    margin: 25px;
+    border-radius: 0.5rem;
+    color: black;
+    filter: drop-shadow(.5rem .5rem .5rem rgb(242, 132, 130));
+}
+
+.bouquetSinglePrice {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+}
+
+.bouquetSingleDescription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-left: 375px;
+    
+}
+
+.bouquetSingleCart {
+    display: flex;
+    justify-content: center;
 }
