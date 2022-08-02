@@ -23,20 +23,3 @@ textarea {
     border-radius: 8px;
     padding: 5px;
 }
-
-#boot {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-button {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-right: 50px;
-    color: #f28482;
-    border-color: black;
-    padding: 15px 15px;
-    border-radius: 8px;
-
-}

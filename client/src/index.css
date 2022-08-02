@@ -6,6 +6,12 @@ html, * {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
+  --yellow: rgb(246, 189, 96);
+  --offwhite: rgb(247, 237, 226);
+  --lightpink: rgb(245, 202, 195);
+  --pink: rgb(242, 132, 130);
+  --red: rgb(188, 44, 26);
+  --black: rgb(25, 23, 22);
 }
 
 body {
@@ -23,4 +29,14 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+button {
+  background-color: var(--pink);
+  color: var(--black);
+  border-radius: 4px;
+  padding: 12px 24px;
+  margin: 16px;
+  border: none;
+  font-weight: bold;
 }
