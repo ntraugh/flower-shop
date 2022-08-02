@@ -15,8 +15,5 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^7.1.0"
-  },
-  "dependencies": {
-    "@formspree/react": "^2.3.0"
   }
 }
