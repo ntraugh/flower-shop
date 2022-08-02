@@ -1,0 +1,12 @@
+.singleBouquetContainer {
+    display: flex;
+    justify-content: center;
+}
+
+/* .bouquetSingleName {
+
+} */
+
+.bouquetSingleImg {
+    height: 300px;
+}
