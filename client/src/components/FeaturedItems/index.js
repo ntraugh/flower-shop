@@ -41,9 +41,9 @@ const FeaturedItems = (item) => {
       }
     }
     
-    const handleClick = () => {
+    // const handleClick = () => {
 
-    }
+    // }
 
   return (
     <div className="cardBody">

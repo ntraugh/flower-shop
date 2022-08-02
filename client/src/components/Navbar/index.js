@@ -17,9 +17,7 @@ function Navbar() {
     }
   }
  
- 
   window.addEventListener("scroll", changeColor)
-
 
   return (
     <div className={color ? "header header-bg" : "header"}>
@@ -54,7 +52,7 @@ function Navbar() {
   // If logged out show login controls
   
 
-     // const logout = (event) => {
+  // const logout = (event) => {
   //   event.preventDefault();
   //   Auth.logout();
   // };

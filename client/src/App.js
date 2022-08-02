@@ -51,9 +51,7 @@ function App() {
       <Router>
       <StoreProvider>
         <>
-          {/* <div>
-            <Header />
-          </div> */}
+          <Header />
           <div>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -67,9 +65,7 @@ function App() {
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </div>
-          <div>
-            <Footer />
-          </div>
+          <Footer />
         </>
       </StoreProvider>
       </Router>

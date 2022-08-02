@@ -5,14 +5,10 @@ import FeaturedItems from '../FeaturedItems';
 import { idbPromise } from '../../utils/helpers';
 import { useStoreContext } from '../../utils/GlobalState';
 
-
-
-
 const FeaturedItemsList = () => {
     const [state, dispatch] = useStoreContext();
 
-    const { loading, data } = useQuery( QUERY_FEATURED )
-    console.log(data)
+    const { loading, data } = useQuery( QUERY_FEATURED );
     useEffect(() => {
         if (data) {
           dispatch({

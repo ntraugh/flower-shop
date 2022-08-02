@@ -1,13 +1,11 @@
-import React, { useState } from "react";
-import ContactForm from "./ContactForm";
-import Header from "../components/Header/index"
+import React from "react";
+import ContactForm from "../components/ContactForm";
 
 function Contact() { 
     return (
         <main>
-        <Header />
           <h2>Contact Us</h2>
-        <ContactForm />
+          <ContactForm />
         </main>
     )
 }
