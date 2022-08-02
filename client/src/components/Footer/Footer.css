@@ -1,0 +1,26 @@
+footer {
+    display: flex;
+    /* flex-direction:row; */
+    position: absolute;
+    justify-content: center;
+    background-color: #f28482;
+    color: rgb(247, 237, 226);
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+}
+
+.footerNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listItem {
+    justify-content: space-around;
+    margin: 16px;
+    display: inline;
+    /* inline-size: 200px; */
+}
+
