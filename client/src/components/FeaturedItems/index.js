@@ -3,6 +3,7 @@ import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
 import { Link } from "react-router-dom"
+import "./FeaturedItems.css"
 
 
 
@@ -39,21 +40,26 @@ const FeaturedItems = (item) => {
         idbPromise('cart', 'put', { ...item, purchaseQuantity: 1 });
       }
     }
+    
+    const handleClick = () => {
+
+    }
+
   return (
-    <div className="">
-        
-      <Link to={`/products/${_id}`}>
-        <img
-          alt={name}
-          src={`/images/${image}`}
-        />
-        <p>{name}</p>
+    <div className="cardBody">
+      <Link className="cardPic" to={`/bouquet/${_id}`}>
+       Hello
       </Link>
-      <div>
-        <span>${price}</span>
+      <img
+          alt={name}
+          src={image}
+      />
+      <div style={{paddingTop: "10px"}}>
+        <p style={{fontWeight: "600"}}>{name}</p>
+        <span style={{fontWeight: "600"}}>${price}</span>
       </div>
-      <button onClick={addToCart}>Add to cart</button>
-      <button>View Details</button>
+      <button style={{fontWeight: "600"}} onClick={addToCart}>Add to cart</button>
+      <button style={{fontWeight: "600"}} Link to={`/bouquet/${_id}`}>View Details</button>
     </div>
   )
 }
