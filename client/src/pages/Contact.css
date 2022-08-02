@@ -6,16 +6,22 @@ form {
 input {
     display: flex;
     width: 25%;
-    background-color: rgb(207, 204, 204);
-    border-color: aliceblue;
+    background-color: #f28482;
+    border-color: black;
+    border-radius: 8px;
+    padding: 5px;
+
 }
 
 textarea {
     margin-top: 5px;
     margin-bottom: 5px;
     width: 60%;
-    background-color: rgb(207, 204, 204);
+    background-color: #f28482;
+    color: rgb(247, 237, 226);
     border-color: black;
+    border-radius: 8px;
+    padding: 5px;
 }
 
 #boot {
@@ -28,6 +34,9 @@ button {
     margin-top: 5px;
     margin-bottom: 5px;
     margin-right: 50px;
-    background-color: rgb(207, 204, 204);
+    color: #f28482;
     border-color: black;
+    padding: 15px 15px;
+    border-radius: 8px;
+
 }
