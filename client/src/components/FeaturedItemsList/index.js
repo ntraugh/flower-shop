@@ -12,14 +12,14 @@ const FeaturedItemsList = () => {
     const [state, dispatch] = useStoreContext();
 
     const { loading, data } = useQuery( QUERY_FEATURED )
-
+    console.log(data)
     useEffect(() => {
         if (data) {
           dispatch({
             type: QUERY_FEATURED,
             products: data.featured,
           });
-          data.featured.forEach((product) => {
+          data?.featured.forEach((product) => {
             idbPromise('products', 'put', product);
           });
         } else if (!loading) {
@@ -31,10 +31,17 @@ const FeaturedItemsList = () => {
           });
         }
       }, [data, loading, dispatch]);
+    if(loading){
+        return (
+            <div>
+                <h2>Loading...</h2>
+            </div>
+        )
+    }
     return (
         <div>
             <h2>Featured Items:</h2>
-                {data.featured.map((item) => (
+            {data?.featured.map((item) => (
                     <FeaturedItems 
                         key={item._id}
                         _id={item._id}
@@ -42,9 +49,7 @@ const FeaturedItemsList = () => {
                         name={item.name}
                         price={item.price}
                         />
-                ))}
-
-            
+                )) ||" No items to display"}
         </div>
     )
 }
