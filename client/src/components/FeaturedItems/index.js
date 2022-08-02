@@ -48,11 +48,12 @@ const FeaturedItems = (item) => {
   return (
     <div className="cardBody">
       <Link className="cardPic" to={`/bouquet/${_id}`}>
-        <img
+       Hello
+      </Link>
+      <img
           alt={name}
           src={image}
-          />
-      </Link>
+      />
       <div style={{paddingTop: "10px"}}>
         <p style={{fontWeight: "600"}}>{name}</p>
         <span style={{fontWeight: "600"}}>${price}</span>
