@@ -10,7 +10,7 @@ function ContactForm() {
       return <p>Thanks for reaching out!</p>;
   }
   return (
-      <form class="mb-3" onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
       <label htmlFor="email">
         Email Address
       </label>
@@ -38,7 +38,7 @@ function ContactForm() {
         field="message"
         errors={state.errors}
       />
-      <button class="btn" id='boot' type="submit"  disabled={state.submitting}>
+      <button className="btn" id='boot' type="submit"  disabled={state.submitting}>
         Submit
       </button>
     </form>

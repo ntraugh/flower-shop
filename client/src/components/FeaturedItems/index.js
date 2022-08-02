@@ -5,9 +5,6 @@ import { idbPromise } from "../../utils/helpers";
 import { Link } from "react-router-dom"
 import "./FeaturedItems.css"
 
-
-
-
 const FeaturedItems = (item) => {
     const [state, dispatch] = useStoreContext();
 
@@ -17,6 +14,8 @@ const FeaturedItems = (item) => {
         name,
         price,
     } = item;
+
+    console.log(_id);
 
     const { cart } = state
 
@@ -40,26 +39,24 @@ const FeaturedItems = (item) => {
         idbPromise('cart', 'put', { ...item, purchaseQuantity: 1 });
       }
     }
-    
-    // const handleClick = () => {
-
-    // }
 
   return (
     <div className="cardBody">
-      <Link className="cardPic" to={`/bouquet/${_id}`}>
-       Hello
+      <Link to={'/bouquet/' + _id}>
+        <img
+            alt={name}
+            src={image}
+            className="cardPic"
+        />
       </Link>
-      <img
-          alt={name}
-          src={image}
-      />
-      <div style={{paddingTop: "10px"}}>
+      <div className="cardContent">
         <p style={{fontWeight: "600"}}>{name}</p>
-        <span style={{fontWeight: "600"}}>${price}</span>
+        <p style={{fontWeight: "600"}}>${price}</p>
+        <button className="addToCart" style={{fontWeight: "600", cursor: "pointer"}} onClick={addToCart}><u>Add to cart</u></button>
+        <Link to={'/bouquet/' + _id}>
+          <button className="viewDetails" style={{fontWeight: "600", cursor: "pointer"}}>View Details</button>
+        </Link>
       </div>
-      <button style={{fontWeight: "600"}} onClick={addToCart}>Add to cart</button>
-      <button style={{fontWeight: "600"}} Link to={`/bouquet/${_id}`}>View Details</button>
     </div>
   )
 }

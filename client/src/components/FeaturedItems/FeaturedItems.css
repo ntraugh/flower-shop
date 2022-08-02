@@ -1,21 +1,36 @@
 .cardBody {
-    max-width: 90%;
+    max-width: 24rem;
     padding: 2rem;
+    margin: 16px;
 }
 
-.cardBody img {
+.cardPic {
     margin: auto;
     border-radius: 0.5rem;
     color: black;
     filter: drop-shadow(.5rem .5rem .5rem rgb(242, 132, 130));
+    max-width: 100%;
 }
 
+.addToCart {
+    background-color: var(--yellow);
+    width: 100%;
+    margin-bottom: 0;
+}
 
+.viewDetails {
+    width: 100%;
+}
 
+.cardContent {
+    padding-top: 10px;
+    text-align: center;
+    margin-right: 30px;
+}
 
-
-
-
+.cardContent p {
+    margin-top: 8px;
+}
 
 /* 
 @media screen and (max-width: 865px) {
