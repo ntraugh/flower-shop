@@ -16,6 +16,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Occasion from './pages/Occasion';
 import Bouquet from './pages/Bouquet';
+import Contact from './pages/Contact';
 
 
 // Construct our main GraphQL API endpoint
@@ -47,9 +48,9 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <>
-          <div>
+          {/* <div>
             <Header />
-          </div>
+          </div> */}
           <div>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -60,6 +61,7 @@ function App() {
               <Route path="/occasion" element={<Occasion />} />
               <Route path="/occasion/:id" element={<Occasion />} />
               <Route path="/bouquet/:id" element={<Bouquet />} />
+              <Route path="/contact" element={<Contact />} />
             </Routes>
           </div>
           <div>
