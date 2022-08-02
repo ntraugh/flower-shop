@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
+import Header from '../components/Header';
+import Navbar from "../components/Navbar/index"
+
 
 import Auth from '../utils/auth';
 
@@ -49,7 +52,8 @@ const Login = () => {
       )
     } 
     return (
-      <form onSubmit={handleFormSubmit}>
+      <>
+      <form style={{paddingTop: "4rem"}}onSubmit={handleFormSubmit}>
         <input
           placeholder="Your email"
           name="email"
@@ -68,11 +72,12 @@ const Login = () => {
           Submit
         </button>
       </form>
+    </>
     );
   };
 
   return (
-    <main>
+    <main style={{paddingTop: "4rem"}}>
       <h4>Login</h4>
       <div>
         {renderForm()}
