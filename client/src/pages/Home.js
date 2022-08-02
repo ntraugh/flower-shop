@@ -5,6 +5,7 @@ import { useQuery } from '@apollo/client';
 import Auth from '../utils/auth';
 import { QUERY_USERS } from '../utils/queries';
 import Navbar from '../components/Navbar';
+import FeaturedItemsList from '../components/FeaturedItemsList';
 // Components
 
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
     <>
       <Navbar />
       <h1>Flower Shop</h1>
+      <FeaturedItemsList />
       {/* body */}
       {/* footer */}
     </>
