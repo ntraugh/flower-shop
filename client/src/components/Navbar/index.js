@@ -40,10 +40,13 @@ function Navbar() {
           <li>
             <Link to="/occasion">Occasions</Link>
           </li>
+          <li>
+            <Link to="/contact">Contact</Link>
+          </li>
         </ul>
         <div className="hamburger" onClick={handleClick}>
           {click ? (<FaTimes size={20} style={{color: "white"}} />) 
-            : (<FaBars size={20} style={{color: "white"}} />)}
+            : (<FaBars size={20} style={{color: "black"}} />)}
         </div>
     </div>
   )
@@ -68,14 +71,7 @@ function Navbar() {
   //     </>
   //   );
   // }
-    // <>
-    //   <Link to="/login">
-    //     Login
-    //   </Link>
-    //   <Link to="/signup">
-    //     Signup
-    //   </Link>
-    // </>
+  
 
 
 export default Navbar

@@ -4,6 +4,7 @@ import { useQuery } from '@apollo/client';
 // Utilities
 import Auth from '../utils/auth';
 import { QUERY_USERS } from '../utils/queries';
+import Navbar from '../components/Navbar';
 // Components
 
 const Home = () => {
@@ -18,6 +19,10 @@ const Home = () => {
 
   return (
     <>
+      <Navbar />
+      <h1>Flower Shop</h1>
+      {/* body */}
+      {/* footer */}
     </>
   );
 };
