@@ -17,7 +17,7 @@ import Profile from './pages/Profile';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Occasion from './pages/Occasion';
-import Bouquet from './pages/Bouquet';
+import Bouquet from './pages/Bouquet/index';
 import Contact from './pages/Contact';
 
 
@@ -51,9 +51,9 @@ function App() {
       <Router>
       <StoreProvider>
         <>
-          {/* <div>
+          <div>
             <Header />
-          </div> */}
+          </div>
           <div>
             <Routes>
               <Route path="/" element={<Home />} />
