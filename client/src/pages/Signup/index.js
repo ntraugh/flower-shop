@@ -1,18 +1,21 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+
 import { useMutation } from '@apollo/client';
-import { LOGIN_USER } from '../utils/mutations';
-import Header from '../components/Header';
-import Navbar from "../components/Navbar/index"
+import { ADD_USER } from '../../utils/mutations';
 
+import "./Signup.css"
 
-import Auth from '../utils/auth';
+import Auth from '../../utils/auth';
 
-const Login = () => {
-  const [formState, setFormState] = useState({ email: '', password: '' });
-  const [login, { error, data }] = useMutation(LOGIN_USER);
+const Signup = () => {
+  const [formState, setFormState] = useState({
+    username: '',
+    email: '',
+    password: '',
+  });
+  const [addUser, { error, data }] = useMutation(ADD_USER);
 
-  // update state based on form input changes
   const handleChange = (event) => {
     const { name, value } = event.target;
 
@@ -22,38 +25,38 @@ const Login = () => {
     });
   };
 
-  // submit form
   const handleFormSubmit = async (event) => {
     event.preventDefault();
+
     try {
-      const { data } = await login({
+      const { data } = await addUser({
         variables: { ...formState },
       });
 
-      Auth.login(data.login.token);
+      Auth.login(data.addUser.token);
     } catch (e) {
       console.error(e);
     }
-
-    // clear form values
-    setFormState({
-      email: '',
-      password: '',
-    });
   };
 
   const renderForm = () => {
     if (data) {
       return (
-        <p>
-          Success! You may now head{' '}
-          <Link to="/">back to the homepage.</Link>
-        </p>
+      <p>
+        Success! You may now head{' '}
+        <Link to="/">back to the homepage.</Link>
+      </p>
       )
     } 
     return (
-      <>
-      <form style={{paddingTop: "4rem"}}onSubmit={handleFormSubmit}>
+      <form id="signup-form" onSubmit={handleFormSubmit}>
+        <input
+          placeholder="Your username"
+          name="username"
+          type="text"
+          value={formState.name}
+          onChange={handleChange}
+        />
         <input
           placeholder="Your email"
           name="email"
@@ -72,13 +75,12 @@ const Login = () => {
           Submit
         </button>
       </form>
-    </>
     );
   };
 
   return (
-    <main style={{paddingTop: "4rem"}}>
-      <h4>Login</h4>
+    <main id="signup-main">
+      <h2>Sign Up</h2>
       <div>
         {renderForm()}
         {error && <div>{error.message}</div>}
@@ -87,4 +89,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;
