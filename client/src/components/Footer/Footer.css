@@ -1,26 +1,30 @@
 footer {
     display: flex;
     /* flex-direction:row; */
-    position: absolute;
+    position:inherit;
     justify-content: center;
-    background-color: #f28482;
-    color: rgb(247, 237, 226);
+    background-color: rgb(247, 237, 226);
+    color: #f28482;
     padding: 1rem;
     width: 100%;
     height: auto;
     bottom: 0;
 }
 
+
 .footerNav {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* color: #f28482; */
 }
 
 .listItem {
     justify-content: space-around;
-    margin: 16px;
+    margin-right: 40px;
+    padding-right: 40px;
     display: inline;
-    /* inline-size: 200px; */
+    color: #f28482;
+    font-size: 1.1rem;
 }
 

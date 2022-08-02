@@ -14,11 +14,10 @@ const Footer = () => {
           Sunday: Noon-5PM
         </li>
         <li className='listItem' id='address'>
-          1 Rose Blvd 
-          Daisyville, NC 
+          <Link to="https://www.google.com/maps/@35.5043075,-80.9124993,12.04z">Address: 1763 Rose Lane. Charlotte, NC</Link>
           </li>
-          <li className='listItem' id='contact'>
-            Contact Us
+          <li className='listItem'>
+            <Link to="/Contact">Contact Us</Link>
           </li>
       </ul>
     </footer>
