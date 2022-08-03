@@ -10,13 +10,14 @@
 }
 
 #aboutUs {
-    margin: 2% 5%;
-}
+    margin: 2% 3%;
+    display: flex;
+    justify-content: center;}
 
 .about div {
     display: flex;
-    margin: 1rem;
-    padding: 2px;
+    margin: 4%;
+    padding: 1.5%;
     line-height: 1.3rem;
     color: #f28482;
     font-size: 1.3rem;

@@ -1,9 +1,16 @@
 form {
     margin: 3% 3%;
-    padding: 2%;
 }
+#contactForm {
+    margin: .5%;
+    padding: 1% 0 0 27%;
+
+}
+
 #contactUs {
-    margin: 2% 5%;
+    margin: 2% 3%;
+    display: flex;
+    justify-content: center;
 }
 
 input {
