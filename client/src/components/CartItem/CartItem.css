@@ -1,0 +1,33 @@
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  text-align: right;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid 
+}
+
+.productQty {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 4px;
+  padding: 4px;
+}
+
+.productQty input[type="number"] {
+  border: none;
+  text-align: center;
+}
+
+.productQty input[type="number"]:active {
+  border: none;
+}
+
+#qtyLabel {
+  margin: 8px;
+}
+
+#deleteBtn {
+  margin: 8px;
+}
