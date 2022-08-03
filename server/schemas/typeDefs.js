@@ -32,6 +32,10 @@ const typeDefs = gql`
     products: [Bouquet]
   }
 
+  type Checkout {
+    session: ID
+  }
+
   type Auth {
     token: ID!
     user: User
@@ -44,13 +48,13 @@ const typeDefs = gql`
     allBouquets(occasionId: ID!): [Bouquet]
     bouquet(bouquetId: ID!): Bouquet
     featured: [Bouquet]
+    checkout(products: [ID]!): Checkout
   }
-
-  
 
   type Mutation {
     addUser(email:String!, username:String!, password:String!): Auth
     login(email:String!, password:String!): Auth
+    addOrder(products: [ID]!): Order
   }
 `;
 
