@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ig from "../Footer/ig.png"
+import yelp from "../Footer/yelp.png"
+
 import './Footer.css'
+
 
 const Footer = () => {
   return (
@@ -18,6 +22,17 @@ const Footer = () => {
           </li>
           <li className='listItem'>
             <Link to="/Contact">Contact Us</Link>
+          </li>
+          <li className='listItem' id='ig'>
+            <a href='https://www.instagram.com/flowerpuns/' alt='Instagram'>
+            <img className="icon" src={ig} alt="Instagram" width='64'></img>
+            </a>
+          </li>
+
+          <li className='listItem' id='yelp'>
+            <a href='https://www.yelp.com/search?find_desc=Flower+Shop&find_loc=Charlotte%2C+NC' alt='Yelp'>
+            <img className="icon" src={yelp} alt="Yelp" width='64'></img>
+            </a>
           </li>
       </ul>
     </footer>

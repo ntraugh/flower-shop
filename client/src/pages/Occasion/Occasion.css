@@ -4,6 +4,7 @@
     font-weight: 300;
     font-size: 52px;
     letter-spacing: -2px;
+    padding-bottom: 20px;
 }
 
 #occImgContainer {
@@ -14,6 +15,7 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-left: 80px;
+    padding-bottom: 20px;
 }
 
 #occImage {
@@ -30,7 +32,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 94%;
     background: rgba(0, 0, 0, 0.6);
     color: white;
     display: flex;
@@ -38,6 +40,7 @@
     justify-content: center;
     opacity: 0;
     transition: opacity 0.25s;
+    border-radius: 0.5rem;
 }
 
 #imageOverlay > * {
@@ -56,4 +59,10 @@
 #occTitle {
     font-size: 2em;
     font-weight: bold;
+}
+
+@media (max-width: 1245px) {
+    #imageOverlay {
+        display: none;
+    }
 }

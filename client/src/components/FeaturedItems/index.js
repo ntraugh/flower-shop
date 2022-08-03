@@ -15,8 +15,6 @@ const FeaturedItems = (item) => {
         price,
     } = item;
 
-    console.log(_id);
-
     const { cart } = state
 
     const addToCart = () => {
