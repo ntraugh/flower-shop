@@ -19,6 +19,7 @@ import Footer from './components/Footer';
 import Occasion from './pages/Occasion';
 import Bouquet from './pages/Bouquet';
 import Contact from './pages/Contact';
+import Cart from './pages/Cart'
 
 
 // Construct our main GraphQL API endpoint
@@ -82,6 +83,7 @@ function App() {
               <Route path="/occasion/:id" element={<Occasion />} />
               <Route path="/bouquet/:id" element={<Bouquet />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/cart" element={<Cart />} />
             </Routes>
           </div>
           <Footer />
