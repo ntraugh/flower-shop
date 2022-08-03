@@ -2,12 +2,14 @@
 import React, { useEffect } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import { useLazyQuery } from '@apollo/client';
-import { QUERY_CHECKOUT } from '../utils/queries';
-import { idbPromise } from '../utils/helpers';
-import CartItem from '../components/CartItem';
-import Auth from '../utils/auth';
-import { useStoreContext } from '../utils/GlobalState';
-import { ADD_MULTIPLE_TO_CART } from '../utils/actions';
+import { QUERY_CHECKOUT } from '../../utils/queries';
+import { idbPromise } from '../../utils/helpers';
+import CartItem from '../../components/CartItem';
+import Auth from '../../utils/auth';
+import { useStoreContext } from '../../utils/GlobalState';
+import { ADD_MULTIPLE_TO_CART } from '../../utils/actions';
+import { Link } from 'react-router-dom';
+import "./Cart.css";
 
 const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
@@ -69,16 +71,21 @@ const Cart = () => {
             <strong>Total: ${calculateTotal()}</strong>
 
             {Auth.loggedIn() ? (
-              <button onClick={submitCheckout}>Checkout</button>
+              <button onClick={submitCheckout} style={{ cursor: "pointer"}}>Checkout</button>
             ) : (
               <span>(log in to check out)</span>
             )}
           </div>
         </div>
       ) : (
-        <h3>
-          You haven't added anything to your cart yet!
-        </h3>
+        <section>
+          <h3>
+            You haven't added anything to your cart yet!
+          </h3>
+          <div style={{margin: "2rem"}}>
+            <Link to="/occasion" style={{ cursor: "pointer", padding: "8px", border: "solid 4px "}}>Shop Now</Link>
+          </div>
+        </section>
       )}
     </div>
   );
