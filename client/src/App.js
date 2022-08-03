@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   ApolloClient,
   InMemoryCache,
@@ -46,12 +46,31 @@ const client = new ApolloClient({
 });
 
 function App() {
+  const [page, setPage] = useState("Flower Shop");
+  let path = window.location.pathname;
+  
+  // sets correct page name upon reload
+  useEffect(() => {
+    if (path === "/" && page !=="Flower Shop | Home") setPage("Flower Shop | Home");
+    else if (path === "/login" && page !=="Flower Shop | Login") setPage("Flower Shop | Login");
+    else if (path === "/signup" && page !=="Flower Shop | Sign Up") setPage("Flower Shop | Sign Up");
+    else if (path === "/me" && page !=="Flower Shop | Profile") setPage("Flower Shop | Profile");
+    else if (path === "/occasion" && page !=="Flower Shop | Shop") setPage("Flower Shop | Shop");
+    else if (path === "/contact" && page !=="Flower Shop | Contact Us") setPage("Flower Shop | Contact Us");
+    else if (page !=="Flower Shop") setPage("Flower Shop");
+  }, []);
+
+  // Changes document title according to pathname
+  useEffect(() => {
+    document.title = page;
+  }, [page]);
+
   return (
     <ApolloProvider client={client}>
       <Router>
       <StoreProvider>
         <>
-          <Header />
+          <Header page={page} setPage={setPage}/>
           <div>
             <Routes>
               <Route path="/" element={<Home />} />
