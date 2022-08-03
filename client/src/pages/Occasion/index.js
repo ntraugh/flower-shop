@@ -1,7 +1,20 @@
 import React from 'react';
+import { QUERY_OCCASIONS } from "../../utils/queries";
+import { useQuery } from '@apollo/client';
 import "./Occasion.css";
 
 function Occasion() {
+  const { loading, data } = useQuery(QUERY_OCCASIONS);
+
+  data?.occasions.map()
+
+  if (loading) {
+    return (
+      <div>
+        <h2>Loading...</h2>
+      </div>
+    )
+  }
 
   return (
     <main id='container'>

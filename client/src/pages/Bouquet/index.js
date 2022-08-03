@@ -59,16 +59,18 @@ const BouquetSingle = () => {
           <img className='bouquetImg' src={image} alt={name} />
         </aside>
         <section className='right-column'>
+
           <div className='bouquetDescription'>
             <h2>{bouquet.name}</h2>
             <p>{description}</p>
           </div>
-          <div className='bouquetPrice'>
-            <span>${price}</span>
+          <div>
+            <span className='bouquetPrice'>${price}</span>
           </div>
           <div id='cartBtn'>
-            <button>Add To Cart</button>
+            <button id='cartBtnTxt'>Add To Cart</button>
           </div>
+
         </section>
       </main>
     </>
