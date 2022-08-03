@@ -3,20 +3,28 @@ footer {
     /* flex-direction:row; */
     position:inherit;
     justify-content: center;
-    background-color: rgb(247, 237, 226);
-    color: #f28482;
+    background-color: #f28482;
+    color: rgb(247, 237, 226);
     padding: 1rem;
     width: 100%;
     height: auto;
     bottom: 0;
 }
 
+footer a {
+    color: rgb(247, 237, 226);
+}
+
+#hours {
+    color: rgb(247, 237, 226);
+    
+}
 
 .footerNav {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* color: #f28482; */
+    color: rgb(247, 237, 226);
 }
 
 .listItem {

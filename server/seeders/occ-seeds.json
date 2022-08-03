@@ -1,26 +1,26 @@
 [
   { 
     "name": "Anniversary", 
-    "image": "./images/anniversary.jpg"
+    "image": "/images/anniversary.jpg"
   },
   { 
     "name": "Birthday",
-    "image": "./images/birthday.jpg"
+    "image": "/images/birthday.jpg"
   },
   {
     "name": "Congratulations",
-    "image": "./images/congrats.jpg"
+    "image": "/images/congrats.jpg"
   },
   { 
     "name": "Get Well", 
-    "image": "./images/getwell.jpg"
+    "image": "/images/getwell.jpg"
   },
   { 
     "name": "Love and Romance", 
-    "image": "./images/romance.jpg"
+    "image": "/images/romance.jpg"
   },
   { 
     "name": "Thank You", 
-    "image": "./images/thanks.jpg"
+    "image": "/images/thanks.jpg"
   }
 ]

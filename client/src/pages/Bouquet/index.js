@@ -54,19 +54,23 @@ const BouquetSingle = () => {
 
   return (
     <>
-      <div className='singleBouquetContainer'>
-        <div className='bouquetSingleName'>
-          <h2>{bouquet.name}</h2>
-        </div>
-        <div>
-          <img className='bouquetSingleImg' src={image} alt={name} />
-        </div>
-        <div className='bouquetSinglePrice'><span>${price}</span></div>
-        <div className='bouquetSingleDescription'><p>{description}</p></div>
-        <div className='bouquetSingleCart'>
-          <button>Add To Cart</button>
-        </div>
-      </div>
+      <main className='singleContainer'>
+        <aside className='left-column'>
+          <img className='bouquetImg' src={image} alt={name} />
+        </aside>
+        <section className='right-column'>
+          <div className='bouquetDescription'>
+            <h2>{bouquet.name}</h2>
+            <p>{description}</p>
+          </div>
+          <div className='bouquetPrice'>
+            <span>${price}</span>
+          </div>
+          <div id='cartBtn'>
+            <button>Add To Cart</button>
+          </div>
+        </section>
+      </main>
     </>
   )
 };
