@@ -1,0 +1,59 @@
+#occH2 {
+    display: flex;
+    justify-content: center;
+    font-weight: 300;
+    font-size: 52px;
+    letter-spacing: -2px;
+}
+
+#occImgContainer {
+    position: relative;
+    width: 25%;
+    margin: 10px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 80px;
+}
+
+#occImage {
+    display: block;
+    width: 100%;
+    margin: auto;
+    border-radius: 0.5rem;
+    color: black;
+    filter: drop-shadow(.5rem .5rem .5rem rgb(242, 132, 130));
+}
+
+#imageOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+#imageOverlay > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+#imageOverlay:hover {
+    opacity: 1;
+}
+
+#imageOverlay:hover > * {
+    transform: translateY(0);
+}
+
+#occTitle {
+    font-size: 2em;
+    font-weight: bold;
+}

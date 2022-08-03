@@ -1,39 +1,93 @@
-.singleBouquetContainer {
+.singleContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
 }
 
-.bouquetSingleName {
-    display: flex;
-    justify-content: center;
-    padding: 30px;
+.left-column {
+    width: 40%;
+    position: relative;
 }
 
-.bouquetSingleImg {
-    height: 300px;
-    margin: 25px;
+.right-column {
+    width: 50%;
+    margin-top: 60px;
+    margin-left: 40px;
+}
+
+.bouquetImg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 125%;
+    margin: auto;
     border-radius: 0.5rem;
     color: black;
     filter: drop-shadow(.5rem .5rem .5rem rgb(242, 132, 130));
 }
 
-.bouquetSinglePrice {
-    display: flex;
-    justify-content: center;
-    font-size: 50px;
+.bouquetDescription {
+    margin-bottom: 20px;
 }
 
-.bouquetSingleDescription {
+.bouquetDescription h2 {
+    font-weight: 300;
+    font-size: 52px;
+    letter-spacing: -2px;
+}
+
+.bouquetDescription p {
+    font-size: 16px;
+    font-weight: 300;
+    color: black;
+    line-height: 24px;
+}
+
+.bouquetPrice {
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 50%;
-    margin-left: 375px;
-    
 }
 
-.bouquetSingleCart {
-    display: flex;
-    justify-content: center;
+.bouquetPrice span {
+    font-size: 26px;
+    font-weight: 300;
+    color: #43474D;
+    margin-right: 20px;
 }
+
+#cartBtn {
+    display: inline-block;
+    border-radius: 6px;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 12px 30px;
+    transition: all .5s;
+}
+
+@media (max-width: 940px) {
+    .singleContainer {
+      flex-direction: column;
+      margin-top: 60px;
+    }
+   
+    .left-column,
+    .right-column {
+      width: 100%;
+    }
+   
+    .left-column img {
+      width: 300px;
+      right: 0;
+      top: -65px;
+      left: initial;
+    }
+  }
+   
+  @media (max-width: 535px) {
+    .left-column img {
+      width: 220px;
+      top: -85px;
+    }
+  }
