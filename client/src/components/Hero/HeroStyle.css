@@ -45,7 +45,12 @@
 }
 
 
-
+@media screen and (max-width: 390px) {
+    
+    .hero {
+        width: 110%;
+    }
+}
 
 
 @media screen and (max-width: 1040px) {
@@ -53,7 +58,7 @@
         position: absolute;
         transform: translate(-50%, -50%);
         top: 40%;
-        left: 49%;
+        left: 40%;
     }
     .hero .content h1 {
         font-size: 3rem;
@@ -63,6 +68,20 @@
     }
 }
 
-@media screen and (max-width: 390px) {
-   
+@media screen and (max-width: 1599px){
+    .hero .content {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 40%;
+        left: 35%;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .hero .content {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 40%;
+        left: 25%;
+    }
 }
