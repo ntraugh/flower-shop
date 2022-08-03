@@ -30,7 +30,7 @@
 .hero .content {
     position: absolute;
     transform: translate(50%, -50%);
-    top: 25%;
+    top: 35%;
     left: 25%;
 }
 
@@ -52,7 +52,7 @@
     .hero .content {
         position: absolute;
         transform: translate(-50%, -50%);
-        top: 30%;
+        top: 40%;
         left: 49%;
     }
     .hero .content h1 {
@@ -61,4 +61,8 @@
     .hero .content p {
         font-size: 1.4rem;
     }
+}
+
+@media screen and (max-width: 390px) {
+   
 }
