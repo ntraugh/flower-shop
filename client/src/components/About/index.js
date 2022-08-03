@@ -8,7 +8,7 @@ function About() {
         <h2>About Us</h2>
         </div>
         <div className="about">
-            <div>Welcome to the Flower Shop! We’re a group of four students descending from Antheia, Chloris  Cybele and Dionysus. We base our business off always stopping to smell the roses and wanted to share a little of that lifestyle with you.</div>
+            <div>Welcome to the Flower Shop! We're a group of four students passionate about flowers, nature, and spreading joy! We base our business off always stopping to smell the roses and wanted to share a little of that lifestyle with you.</div>
             <div>
             We aren’t dandelion when we say that our arrangements are simply iris-istible! It is our guarantee, and if you aren’t head clover heels for your arrangment, simply let us know and we will make it right.</div>
             <div>
