@@ -5,7 +5,7 @@ const Home = () => {
 
   return (
     <main>
-      <h1>Flower Shop</h1>
+      <h1 style={{fontSize: "1.5em"}}>Flower Shop</h1>
       <FeaturedItemsList />
     </main>
   );

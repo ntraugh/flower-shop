@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaShoppingCart } from "react-icons/fa";
 // import Auth from '../../utils/auth';
 import "./NavbarStyle.css";
 
@@ -82,6 +82,15 @@ function Navbar({ page, setPage }) {
           >
             Contact
           </Link>
+        </li>
+        <li>
+        <Link to='/cart'>
+          <FaShoppingCart
+                            
+          size={28}
+          style={{ color: "rgb(242, 132, 130)", justifyContent: "flex-end"}}
+          />
+        </Link>
         </li>
       </ul>
       <div className="hamburger" onClick={handleClick}>
