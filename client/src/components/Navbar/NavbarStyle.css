@@ -17,15 +17,6 @@
     z-index: 10;
 }
 
-/* .header-bg {
-    background: linear-gradient(var(--pink), var(--lightpink), rgb(0,0,0,0));
-    transition: 0.1s;
-}
-
-.header-bg a {
-    color: var(--black);
-    transition: 0.5s;
-} */
 
 .nav-menu {
     display: flex;
@@ -60,22 +51,23 @@
         position: absolute;
         top: 0;
         left: -100%;
-        z-index: -3;
         transition: 0.5s;
     }
 
     .nav-menu.active {
         left: 0;
+        z-index: 3;
     }
     .nav-menu li {
-        padding: 1rem 0; 
+        padding: 2rem 0; 
     }
 
     .nav-menu li a {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .hamburger {
         display: initial;
+        z-index: 3;
     }
 }

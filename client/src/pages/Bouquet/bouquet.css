@@ -1,93 +1,161 @@
 .singleContainer {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 15px;
-    display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .left-column {
-    width: 40%;
-    position: relative;
+  width: 40%;
+  position: relative;
 }
 
 .right-column {
-    width: 50%;
-    margin-top: 60px;
-    margin-left: 40px;
+  width: 50%;
+  margin-top: 60px;
+  margin-left: 40px;
+  background-color: rgba(246, 189, 96, 0.50);
+  border-radius: 12px;
 }
 
 .bouquetImg {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 125%;
-    margin: auto;
-    border-radius: 0.5rem;
-    color: black;
-    filter: drop-shadow(.5rem .5rem .5rem rgb(242, 132, 130));
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 80%;
+  height: 125%;
+  margin: auto;
+  border-radius: 0.5rem;
+  color: black;
+  filter: drop-shadow(.5rem .5rem .5rem rgb(242, 132, 130));
 }
 
 .bouquetDescription {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
 }
 
 .bouquetDescription h2 {
-    font-weight: 300;
-    font-size: 52px;
-    letter-spacing: -2px;
+  font-weight: 300;
+  font-size: 52px;
+  letter-spacing: -2px;
+  padding-bottom: 10px;
 }
 
 .bouquetDescription p {
-    font-size: 16px;
-    font-weight: 300;
-    color: black;
-    line-height: 24px;
+  font-size: 18px;
+  font-weight: 400;
+  color: black;
+  line-height: 24px;
 }
 
 .bouquetPrice {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: larger;
+  padding-left: 20px;
+
 }
 
 .bouquetPrice span {
-    font-size: 26px;
-    font-weight: 300;
-    color: #43474D;
-    margin-right: 20px;
+  font-size: 26px;
+  font-weight: 300;
+  color: #43474D;
+  margin-right: 20px;
 }
 
-#cartBtn {
-    display: inline-block;
-    border-radius: 6px;
-    font-size: 16px;
-    text-decoration: none;
-    padding: 12px 30px;
-    transition: all .5s;
+#cartBtnTxt {
+  display: inline-block;
+  border-radius: 6px;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 12px 30px;
+  transition: all .5s;
 }
 
-@media (max-width: 940px) {
-    .singleContainer {
-      flex-direction: column;
-      margin-top: 60px;
-    }
-   
-    .left-column,
-    .right-column {
-      width: 100%;
-    }
-   
-    .left-column img {
-      width: 300px;
-      right: 0;
-      top: -65px;
-      left: initial;
-    }
+@media (max-width: 1100px) {
+  .singleContainer {
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 20px;
   }
-   
-  @media (max-width: 535px) {
-    .left-column img {
-      width: 220px;
-      top: -85px;
-    }
+
+  .left-column,
+  .right-column {
+    flex-direction: column;
   }
+
+  .left-column {
+    width: 100%;
+  }
+
+  .right-column {
+    text-size-adjust: auto;
+    width: 90%;
+    justify-content: center;
+  }
+
+  .bouquetDescription {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+  }
+
+  .bouquetDescription h2 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .bouquetDescription p {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .bouquetPrice {
+    justify-content: center;
+    margin-right: 15px;
+  }
+
+  #cartBtn {
+    display: flex;
+    justify-content: center;
+  }
+
+  #cartBtnTxt {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+  }
+
+  .bouquetImg {
+    position: relative;
+    display: flex;
+    width: 50%;
+    height: 80%;
+    border-radius: 0.5rem;
+    color: black;
+    filter: drop-shadow(.5rem .5rem .5rem rgb(242, 132, 130));
+  }
+
+
+}
+
+@media (max-width: 535px) {
+  .left-column {
+    width: 100%;
+    margin-bottom: -40px;
+  }
+
+  .bouquetDescription p {
+    margin-bottom: -20px;
+  }  
+
+  .bouquetPrice {
+    margin-right: 10px;
+  }
+}

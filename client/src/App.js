@@ -19,7 +19,8 @@ import Footer from './components/Footer';
 import Occasion from './pages/Occasion';
 import Bouquet from './pages/Bouquet';
 import Contact from './pages/Contact';
-import Cart from './pages/Cart'
+import Cart from './pages/Cart';
+import Success from './pages/Success';
 
 
 // Construct our main GraphQL API endpoint
@@ -58,6 +59,7 @@ function App() {
     else if (path === "/me" && page !=="Flower Shop | Profile") setPage("Flower Shop | Profile");
     else if (path === "/occasion" && page !=="Flower Shop | Shop") setPage("Flower Shop | Shop");
     else if (path === "/contact" && page !=="Flower Shop | Contact Us") setPage("Flower Shop | Contact Us");
+    else if (path === "/cart" && page !=="Flower Shop | Checkout") setPage("Flower Shop | Checkout");
     else if (page !=="Flower Shop") setPage("Flower Shop");
   }, []);
 
@@ -84,6 +86,7 @@ function App() {
               <Route path="/bouquet/:id" element={<Bouquet />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/cart" element={<Cart />} />
+              <Route path="/success" element={<Success />} />
             </Routes>
           </div>
           <Footer />
