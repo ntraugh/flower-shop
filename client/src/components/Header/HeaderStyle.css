@@ -1,0 +1,15 @@
+.headerInfo {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    
+}
+
+.headerImg {
+    padding-right: 20px;
+}
+
+/* .headerInfo img{
+    width: 10%;
+    height: 30%;
+} */
