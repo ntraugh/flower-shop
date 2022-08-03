@@ -38,8 +38,7 @@ const FeaturedItemsList = () => {
         )
     }
     return (
-        <div>
-            <h2>Featured Items:</h2>
+        <div className='featuredText'>
             <div id="featuredContainer">
               {data?.featured.map((item) => (
                       <FeaturedItems 
