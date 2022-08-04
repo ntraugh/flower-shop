@@ -11,7 +11,7 @@ function ContactForm() {
     <div id="contactForm">
       <form id="formContact" onSubmit={handleSubmit}>
         <label htmlFor="email"></label>
-        <input
+        <input id="emailInput"
           placeholder="Your email"
           type="email"
           name="email"
@@ -23,6 +23,7 @@ function ContactForm() {
           id="message"
           name="message"
           rows={7}
+          maxLength={500}
           placeholder="Your message here"
         />
         <ValidationError
@@ -31,7 +32,7 @@ function ContactForm() {
           errors={state.errors}
         />
         <button
-          className="btn"
+          // className="btn"
           id="boot"
           type="submit"
           disabled={state.submitting}
