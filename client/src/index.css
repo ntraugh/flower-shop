@@ -28,7 +28,6 @@ h1, h2, a {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  
 }
 
 ul {
