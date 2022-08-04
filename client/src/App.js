@@ -91,7 +91,7 @@ function App() {
               <Route path="/success" element={<Success setPage={setPage}/>} />
             </Routes>
           </div>
-          <Footer />
+          <Footer setPage={setPage} />
         </div>
       </StoreProvider>
       </Router>
