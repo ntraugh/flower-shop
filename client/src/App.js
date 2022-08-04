@@ -21,6 +21,7 @@ import Bouquet from './pages/Bouquet';
 import Contact from './pages/Contact';
 import Cart from './pages/Cart';
 import Success from './pages/Success';
+import BouquetList from './pages/BouquetList';
 
 
 // Construct our main GraphQL API endpoint
@@ -82,7 +83,7 @@ function App() {
               <Route path="/me" element={<Profile />} />
               <Route path="/users/:id" element={<Profile />} />
               <Route path="/occasion" element={<Occasion />} />
-              <Route path="/occasion/:id" element={<Occasion />} />
+              <Route path="/occasion/:id" element={<BouquetList />} />
               <Route path="/bouquet/:id" element={<Bouquet />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/cart" element={<Cart />} />
