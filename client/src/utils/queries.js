@@ -39,6 +39,7 @@ query AllBouquets($occasionId: ID!) {
 export const QUERY_BOUQUET = gql`
 query Bouquet($bouquetId: ID!) {
   bouquet(bouquetId: $bouquetId) {
+    _id
     name
     description
     image

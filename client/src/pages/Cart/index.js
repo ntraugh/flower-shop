@@ -71,7 +71,7 @@ const Cart = () => {
             <strong>Total: ${calculateTotal()}</strong>
 
             {Auth.loggedIn() ? (
-              <button classname="checkoutBtn" onClick={submitCheckout} style={{ cursor: "pointer"}}>Checkout</button>
+              <button classame="checkoutBtn" onClick={submitCheckout} style={{ cursor: "pointer"}}>Checkout</button>
             ) : (
               <Link to="/login">
                 <button classname="checkoutBtn" style={{ cursor: "pointer"}}>Login to Checkout</button>
