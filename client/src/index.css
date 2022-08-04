@@ -41,3 +41,11 @@ button {
   border: none;
   font-weight: bold;
 }
+
+button:hover {
+  padding: 11px 21px 9px 21px ;
+  border-bottom: 3px solid rgb(217, 110, 108);
+  border-right: 3px solid rgb(217, 110, 108);
+  border-left: 1px solid rgb(217, 110, 108);
+  border-top: 1px solid rgb(217, 110, 108);
+}

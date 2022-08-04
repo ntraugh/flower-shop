@@ -18,6 +18,14 @@
     margin-bottom: 0;
 }
 
+.addToCart:hover {
+    padding: 11px 21px 9px 21px ;
+    border-bottom: 3px solid rgb(218, 154, 51);
+    border-right: 3px solid rgb(218, 154, 51);
+    border-left: 1px solid rgb(218, 154, 51);
+    border-top: 1px solid rgb(218, 154, 51);
+  }
+
 .viewDetails {
     width: 100%;
 }

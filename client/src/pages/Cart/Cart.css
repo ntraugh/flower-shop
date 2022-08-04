@@ -1,11 +1,11 @@
-/* .cart {
+.cart {
   --yellow: rgb(246, 189, 96);
   --offwhite: rgb(247, 237, 226);
   --lightpink: rgb(245, 202, 195);
   --pink: rgb(242, 132, 130);
   --red: rgb(188, 44, 26);
   --black: rgb(25, 23, 22);
-} */
+}
 
 .cart {
   display: flex;
