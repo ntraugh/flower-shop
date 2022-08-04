@@ -25,18 +25,24 @@ function Occasion() {
       <div id='occH2'>
         <h2>Occasions</h2>
       </div>
+      <div id='contentHolder'>
       {stuff?.map((occasion) => {
         return (
+
           <div id='occImgContainer'>
-              <div id='occTitle'>
-                <Link to={'/occasion/' + occasion._id}>{occasion.name}</Link>
-              </div>
-            <Link to={'/occasion/' + occasion._id}><img src={occasion.image} alt={occasion.name} id='occImage' /></Link>
-            <div id='imageOverlay'>
-            </div>
+
+            <Link to={'/occasion/' + occasion._id}>
+              <h3 id='occTitle'>{occasion.name}</h3>
+              </Link>
+
+            <Link to={'/occasion/' + occasion._id}>
+              <img src={occasion.image} alt={occasion.name} id='occImage' />
+              </Link>
+
           </div>
         )
       })}
+      </div>
     </main>
   )
 };

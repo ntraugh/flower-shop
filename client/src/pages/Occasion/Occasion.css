@@ -1,39 +1,70 @@
 #occH2 {
     display: flex;
     justify-content: center;
-    font-weight: 300;
-    font-size: 52px;
+    font-size: 70px;
+    margin: 30px;
     letter-spacing: -2px;
     padding-bottom: 20px;
 }
 
-#occImgContainer {
-    position: relative;
-    width: 25%;
-    margin: 10px;
-    display: inline-flex;
-    flex-wrap: wrap;
+#contentHolder {
+    display: flex;
     justify-content: center;
-    margin-left: 80px;
-    padding-bottom: 20px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+#occImgContainer {
+    width: 25%;
+    margin: 20px;
 }
 
 #occImage {
-    display: block;
-    width: 100%;
     margin: auto;
     border-radius: 0.5rem;
     color: black;
     filter: drop-shadow(.5rem .5rem .5rem rgb(242, 132, 130));
+    max-width: 100%;
 }
 
-#occTitle {
-    font-size: 30px;
-    font-weight: bold;
+@media (max-width: 391px) {
+    #occH2 {
+        font-size: 45px;
+        margin-bottom: -30px;
+    }
+
+    #occImgContainer {
+       width: 100%; 
+    }
 }
 
-@media (max-width: 1245px) {
+@media (max-width: 413px) {
+    #occH2 {
+        font-size: 45px;
+        margin-top: -20px;
+        margin-bottom: -20px;
+    }
+
+    #occImgContainer {
+       width: 100%; 
+    }
+    
     #occTitle {
-        font-size: 20px; 
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 821px) {
+    #occH2 {
+        font-size: 45px;
+        margin-bottom: -30px;
+    }
+
+    #occImgContainer {
+       width: 100%; 
+    } 
+
+    #occTitle {
+        font-size: 30px;
     }
 }
