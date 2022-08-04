@@ -1,24 +1,24 @@
 .about {
-    /* display: flex;
-    flex-direction:column; */
+    /* display: flex; */
+    /* flex-direction:column; */
     border: 4px solid #f28482;;
     border-radius: 8px;
-    padding: 1.3rem;
-    margin: 5% auto;
-    width: 50rem;
+    padding: 1rem;
+    margin: 3% auto;
+    width: 90%;
     
 }
 
 #aboutUs {
-    margin: 2% 3%;
+    margin: 2% 5%;
     display: flex;
     justify-content: center;}
 
 .about div {
     display: flex;
-    margin: 4%;
-    padding: 1.5%;
-    line-height: 1.3rem;
+    margin: .5%;
+    padding: .5%;
+    line-height: 1.5rem;
     color: #f28482;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
 }

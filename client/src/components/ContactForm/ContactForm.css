@@ -1,41 +1,60 @@
-form {
-    margin: 3% 3%;
+#formContact {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1% 1% 1% 0%;
+    padding: .5%;
 }
 #contactForm {
-    margin: .5%;
-    padding: 1% 0 0 27%;
-
+    display: flex;
+    justify-content: center;
+    padding: 1% 20% 0 25%;
+    margin: 5% 5% 0 5%;
+    /* width: 90%; */
+    border: solid 4px;
+    border-color: rgb(242, 132, 130);
+    border-radius: 8px;
 }
 
 #contactUs {
-    margin: 2% 3%;
+    margin: 2% 5%;
     display: flex;
     justify-content: center;
 }
 
-input {
+#emailInput {
     display: flex;
-    width: 25%;
-    background-color: #f28482;
-    border-color: black;
+    width: 90%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: rgb(245, 202, 195);
+    border: none;
     border-radius: 8px;
-    padding: 5px;
-
+    padding: 8px 16px;
+    font-size: large;
 }
 
 textarea {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    width: 60%;
-    background-color: #f28482;
-    color: rgb(247, 237, 226);
-    border-color: black;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 90%;
+    background-color: rgb(245, 202, 195);
+    border: none;
     border-radius: 8px;
-    padding: 5px;
+    padding: 8px 16px;
+    font-size: large;
 }
 
+#contactForm input::placeholder{
+    color: black;
+  }
+
+  #contactForm textarea::placeholder{
+    color: black;
+  }
+
 #boot {
-    display: flex;
-    margin: 10px 10px;
-    padding: 10px;
+    margin: 1% 12% 0% 0;
 }
