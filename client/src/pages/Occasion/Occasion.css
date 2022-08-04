@@ -27,42 +27,13 @@
     filter: drop-shadow(.5rem .5rem .5rem rgb(242, 132, 130));
 }
 
-#imageOverlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 94%;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.25s;
-    border-radius: 0.5rem;
-}
-
-#imageOverlay > * {
-    transform: translateY(20px);
-    transition: transform 0.25s;
-}
-
-#imageOverlay:hover {
-    opacity: 1;
-}
-
-#imageOverlay:hover > * {
-    transform: translateY(0);
-}
-
 #occTitle {
-    font-size: 2em;
+    font-size: 30px;
     font-weight: bold;
 }
 
 @media (max-width: 1245px) {
-    #imageOverlay {
-        display: none;
+    #occTitle {
+        font-size: 20px; 
     }
 }
