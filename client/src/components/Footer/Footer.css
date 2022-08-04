@@ -36,5 +36,25 @@ footer a {
     display: inline;
     color: #f28482;
     font-size: 1.1rem;
+    font-weight: 600;
 }
 
+
+
+@media screen and (max-width: 1053px) {
+    .footerNav {
+        margin-left: 40px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        
+    }
+    .listItem {
+        font-weight: 600;
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+    #address {
+        margin-left: 22px;
+    }
+}
