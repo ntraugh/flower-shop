@@ -4,7 +4,7 @@
   text-align: right;
   margin: 1rem;
   padding: 1rem;
-  border: 1px solid 
+  border: 1px solid rgb(25, 23, 22);
 }
 
 .productQty {
@@ -18,16 +18,41 @@
 .productQty input[type="number"] {
   border: none;
   text-align: center;
+  filter: drop-shadow(.1rem .1rem .1rem rgb(217, 110, 108));
 }
 
 .productQty input[type="number"]:active {
   border: none;
 }
 
-#qtyLabel {
+.qtyLabel {
   margin: 8px;
+  font-weight: 500;
+  display: flex-start;
 }
 
-#deleteBtn {
-  margin: 8px;
+.cartItemTitle {
+  font-weight: 600;
+}
+
+.deleteBtn {
+  padding: 6px 10px;
+  margin: 4px;
+  margin-left: 3rem;
+  cursor: pointer;
+}
+
+.deleteBtn:hover {
+  padding: 4px 8px;
+  margin: 4px;
+  margin-left: 3rem;
+  cursor: pointer;
+}
+
+.cartItemPrice {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-weight: 500;
+  margin-right: 1rem;
 }

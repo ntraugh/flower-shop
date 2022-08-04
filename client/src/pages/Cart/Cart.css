@@ -22,3 +22,22 @@
   margin: .5rem;
   color: var(--pink);
 }
+
+#totalAndBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#loadingGifSeen {
+  width: 4rem;
+  margin-left: 1rem;
+  visibility: visible;
+}
+
+#loadingGifUnseen {
+  width: 4rem;
+  margin-left: 1rem;
+  visibility: hidden;
+}

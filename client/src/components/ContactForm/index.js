@@ -9,14 +9,13 @@ function ContactForm() {
   }
   return (
     <div id="contactForm">
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="email">Email Address</label>
-        <input
-          id="email"
+      <form id="formContact" onSubmit={handleSubmit}>
+        <label htmlFor="email"></label>
+        <input id="emailInput"
+          placeholder="Your email"
           type="email"
           name="email"
-          className="formControll"
-          placeholder="name@example.com"
+
         />
         <ValidationError prefix="Email" field="email" errors={state.errors} />
         <textarea
@@ -24,6 +23,7 @@ function ContactForm() {
           id="message"
           name="message"
           rows={7}
+          maxLength={500}
           placeholder="Your message here"
         />
         <ValidationError
@@ -32,7 +32,7 @@ function ContactForm() {
           errors={state.errors}
         />
         <button
-          className="btn"
+          // className="btn"
           id="boot"
           type="submit"
           disabled={state.submitting}
