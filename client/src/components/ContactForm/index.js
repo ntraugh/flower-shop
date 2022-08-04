@@ -9,14 +9,13 @@ function ContactForm() {
   }
   return (
     <div id="contactForm">
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="email">Email Address</label>
+      <form id="formContact" onSubmit={handleSubmit}>
+        <label htmlFor="email"></label>
         <input
-          id="email"
+          placeholder="Your email"
           type="email"
           name="email"
-          className="formControll"
-          placeholder="name@example.com"
+
         />
         <ValidationError prefix="Email" field="email" errors={state.errors} />
         <textarea
