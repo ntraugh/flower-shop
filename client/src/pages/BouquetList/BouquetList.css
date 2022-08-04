@@ -1,0 +1,9 @@
+.singleOccContainer {
+    text-align: center;
+}
+
+#singleOccasion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
