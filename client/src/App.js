@@ -90,7 +90,7 @@ function App() {
               <Route path="/success" element={<Success />} />
             </Routes>
           </div>
-          <Footer />
+          <Footer setPage={setPage} />
         </div>
       </StoreProvider>
       </Router>
