@@ -15,7 +15,7 @@ const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
 const Cart = () => {
   const [state, dispatch] = useStoreContext();
-  const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
+  const [getCheckout, { loading, data }] = useLazyQuery(QUERY_CHECKOUT);
 
   useEffect(() => {
     if (data) {
@@ -67,15 +67,20 @@ const Cart = () => {
             <CartItem key={item._id} item={item} />
           ))}
 
-          <div>
+          <div id="totalAndBtn">
             <strong>Total: ${calculateTotal()}</strong>
 
             {Auth.loggedIn() ? (
-              <button classname="checkoutBtn" onClick={submitCheckout} style={{ cursor: "pointer"}}>Checkout</button>
+              <button className="checkoutBtn" onClick={submitCheckout} style={{ cursor: "pointer"}}>Checkout</button>
             ) : (
               <Link to="/login">
-                <button classname="checkoutBtn" style={{ cursor: "pointer"}}>Login to Checkout</button>
+                <button className="checkoutBtn" style={{ cursor: "pointer"}}>Login to Checkout</button>
               </Link>
+            )}
+            {loading ? (
+              <img id="loadingGifSeen" src="/images/loadingflower.gif" alt="loading"/>
+            ) : (
+              <img id="loadingGifUnseen" src="/images/loadingflower.gif" alt="loading"/>
             )}
           </div>
         </div>
