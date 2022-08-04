@@ -31,7 +31,7 @@ function Occasion() {
               <div id='occTitle'>
                 <Link to={'/occasion/' + occasion._id}>{occasion.name}</Link>
               </div>
-            <img src={occasion.image} alt={occasion.name} id='occImage' />
+            <Link to={'/occasion/' + occasion._id}><img src={occasion.image} alt={occasion.name} id='occImage' /></Link>
             <div id='imageOverlay'>
             </div>
           </div>

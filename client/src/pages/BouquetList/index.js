@@ -1,7 +1,7 @@
 import React from 'react';
 import { QUERY_ALL_BOUQUETS } from '../../utils/queries';
 import { useQuery } from '@apollo/client';
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import FeaturedItems from '../../components/FeaturedItems';
 import './BouquetList.css';
 

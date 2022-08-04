@@ -36,6 +36,7 @@ const FeaturedItems = (item) => {
         });
         idbPromise('cart', 'put', { ...item, purchaseQuantity: 1 });
       }
+
     }
 
   return (
