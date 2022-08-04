@@ -16,7 +16,16 @@
     background-color: var(--yellow);
     width: 100%;
     margin-bottom: 0;
+    filter: drop-shadow(.1rem .1rem .1rem rgb(218, 154, 51));
 }
+
+.addToCart:hover {
+    padding: 11px 21px 9px 23px;
+    border-bottom: 3px solid rgb(218, 154, 51);
+    border-right: 3px solid rgb(218, 154, 51);
+    border-left: 1px solid rgb(218, 154, 51);
+    border-top: 1px solid rgb(218, 154, 51);
+  }
 
 .viewDetails {
     width: 100%;
