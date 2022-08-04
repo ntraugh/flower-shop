@@ -59,6 +59,7 @@ textarea {
     margin: 1% 12% 0% 0;
 }
 
+
 #reachOut {
     display: flex;
     align-content: center;
@@ -67,3 +68,4 @@ textarea {
     font-style: italic;
     border: 2px black;
 }
+
