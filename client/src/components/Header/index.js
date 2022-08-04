@@ -1,18 +1,27 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import Navbar from '../Navbar';
 import { Link } from "react-router-dom"
 import { FaShoppingCart } from "react-icons/fa"
 import { useStoreContext } from "../../utils/GlobalState";
 import "./HeaderStyle.css"
+import { idbPromise } from '../../utils/helpers';
 
 const Header = (props) => {
-  const [state, dispatch] = useStoreContext();
-  const { cart } = state
-  let cartArray = cart
+  // Using Global State to get cart array
+  const [{ cart }, dispatch] = useStoreContext();
+  const [cartArray, setCartArray] = useState(cart);
+
+  // If the cart cannot be recieved from Global State, array will be provided by idb
   useEffect(() => {
-    const { cart } = state
-    let cartArray = cart
-  }, []);
+    async function getCart() {
+      const newCart = await idbPromise('cart', 'get');
+      setCartArray(newCart);
+    }
+
+    if (!cart.length) {
+      getCart();
+    }
+  }, [cart.length, dispatch]);
 
   return (
     <>
@@ -30,7 +39,14 @@ const Header = (props) => {
             size={40}
             onClick={() => props.setPage("Flower Shop | Checkout")}
             style={"Flower Shop | Checkout" === props.page ? ({ color: "rgb(246, 189, 96)"}): null}
-            /> <p className='cartNoti'>{ cartArray.reduce((p, c) => p + c.purchaseQuantity, 0)  }</p>
+            /> 
+          <p className='cartNoti'>
+            { 
+              // reduce cart to get total purchases
+              cart?.reduce((p, c) => p + c.purchaseQuantity, 0) ||  
+              cartArray?.reduce((p, c) => p + c.purchaseQuantity, 0)
+            }
+          </p>
         </Link>
       </div>
     </div>
