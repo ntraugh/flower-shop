@@ -42,15 +42,6 @@ function Navbar({ page, setPage }) {
         </li>
         <li>
           <Link
-            to="/me"
-            onClick={() => setPage("Flower Shop | Profile")}
-            style={"Flower Shop | Profile" === page ? ({ color: "rgb(246, 189, 96)"}): null}
-          >
-            Profile
-          </Link>
-        </li>
-        <li>
-          <Link
             to="/occasion"
             onClick={() => setPage("Flower Shop | Shop")}
             style={"Flower Shop | Shop" === page ? ({ color: "rgb(246, 189, 96)"}): null}
@@ -133,6 +124,7 @@ function Navbar({ page, setPage }) {
             to="/occasion"
             onClick={() => setPage("Flower Shop | Shop")}
             style={"Flower Shop | Shop" === page ? ({ color: "rgb(246, 189, 96)"}): null}
+
           >
             Occasions
           </Link>
@@ -142,6 +134,7 @@ function Navbar({ page, setPage }) {
             to="/contact"
             onClick={() => setPage("Flower Shop | Contact")}
             style={"Flower Shop | Contact" === page ? ({ color: "rgb(246, 189, 96)"}): null}
+
           >
             Contact Us
           </Link>

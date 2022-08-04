@@ -3,8 +3,10 @@ footer {
     /* flex-direction:row; */
     position:inherit;
     justify-content: center;
+    justify-self: flex-end;
     background-color: #f28482;
     color: rgb(247, 237, 226);
+    margin-top: 2rem;
     padding: 1rem;
     width: 100%;
     height: auto;

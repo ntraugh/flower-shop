@@ -73,9 +73,9 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
       <StoreProvider>
-        <>
+        <div id='wholePageContainer'>
           <Header page={page} setPage={setPage}/>
-          <div>
+          <div id='mainSection' style={{flexGrow: "1"}}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
@@ -91,7 +91,7 @@ function App() {
             </Routes>
           </div>
           <Footer />
-        </>
+        </div>
       </StoreProvider>
       </Router>
     </ApolloProvider>

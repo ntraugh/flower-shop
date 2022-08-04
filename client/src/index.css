@@ -22,6 +22,12 @@ h1, h2, a {
   color: rgb(242, 132, 130);
 }
 
+#wholePageContainer {
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
 
 ul {
   list-style-type: none;
