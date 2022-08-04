@@ -43,7 +43,7 @@ db.once('open', async () => {
       name: 'Light and Airy',
       occasion: [occasions[3]._id, occasions[2]._id],
       description:
-        'A bouquet to brighten up the room! Features pale pink foses and white accent flowers.',
+        'A bouquet to brighten up the room! Features pale pink roses and white accent flowers.',
       image: '/images/b4.jpg',
       price: 45.00,
       featured: true
