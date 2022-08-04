@@ -27,7 +27,7 @@ const Header = (props) => {
     <>
    <div className='headerInfo'>
     <h1>
-      <Link to="/">
+      <Link to="/" onClick={() => props.setPage("Flower Shop | Home")}>
       <span className='headerImg'>
         <img src='/images/favicon-32x32.png' alt='logo'></img>
       </span>Flower Shop

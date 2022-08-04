@@ -6,7 +6,7 @@ import yelp from "../Footer/yelp.png"
 import './Footer.css'
 
 
-const Footer = () => {
+const Footer = (props) => {
   return (
     <footer>
       <ul className='footerNav'>
@@ -18,10 +18,10 @@ const Footer = () => {
           Sunday: Noon-5PM
         </li>
         <li className='listItem' id='address'>
-          <a href="https://www.google.com/maps/@35.5043075,-80.9124993,12.04z">Address: 1763 Rose Lane. Charlotte, NC</a>
+          <a href="https://www.google.com/maps/@35.5043075,-80.9124993,12.04z">1763 Rose Lane. Charlotte, NC</a>
           </li>
           <li className='listItem'>
-            <Link to="/Contact">Contact Us</Link>
+            <Link to="/Contact" onClick={() => props.setPage("Flower Shop | Contact")}>Contact Us</Link>
           </li>
           <li className='listItem' id='ig'>
             <a href='https://www.instagram.com/flowerpuns/' alt='Instagram'>
