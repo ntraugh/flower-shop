@@ -5,7 +5,7 @@ import { ADD_ORDER } from '../utils/mutations';
 import { idbPromise } from '../utils/helpers';
 import { Link } from 'react-router-dom';
 
-function Success() {
+function Success(props) {
   const [addOrder] = useMutation(ADD_ORDER);
 
   useEffect(() => {
@@ -31,9 +31,13 @@ function Success() {
     <div style={{textAlign: "center", flexGrow: "1" }}>
         <h1>Success!</h1>
         <h2 style={{margin: "1rem"}}>Thank you for your purchase!</h2>
-        <p style={{margin: "1rem"}}>See your Recent Purchases by visiting your profile.</p>
         <div style={{margin: "2rem"}}>
-          <Link to="/" style={{ cursor: "pointer", padding: "4px", border: "solid 4px "}}>Back to Home Page</Link>
+          <Link 
+            to="/"
+            style={{ cursor: "pointer", padding: "4px", border: "solid 4px "}}
+            onClick={() => props.setPage("Flower Shop | Home")}>
+            Back to Home Page
+          </Link>
         </div>
     </div>
   );

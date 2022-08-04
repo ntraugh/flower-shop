@@ -59,8 +59,9 @@ function App() {
     else if (path === "/signup" && page !=="Flower Shop | Sign Up") setPage("Flower Shop | Sign Up");
     else if (path === "/me" && page !=="Flower Shop | Profile") setPage("Flower Shop | Profile");
     else if (path === "/occasion" && page !=="Flower Shop | Shop") setPage("Flower Shop | Shop");
-    else if (path === "/contact" && page !=="Flower Shop | Contact Us") setPage("Flower Shop | Contact Us");
+    else if (path === "/contact" && page !=="Flower Shop | Contact") setPage("Flower Shop | Contact Us");
     else if (path === "/cart" && page !=="Flower Shop | Checkout") setPage("Flower Shop | Checkout");
+    else if (path === "/success" && page !=="Flower Shop | Success") setPage("Flower Shop | Success");
     else if (page !=="Flower Shop") setPage("Flower Shop");
   }, []);
 
@@ -87,7 +88,7 @@ function App() {
               <Route path="/bouquet/:id" element={<Bouquet />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/cart" element={<Cart />} />
-              <Route path="/success" element={<Success />} />
+              <Route path="/success" element={<Success setPage={setPage}/>} />
             </Routes>
           </div>
           <Footer setPage={setPage} />
