@@ -39,10 +39,11 @@ button {
   margin: 16px;
   border: none;
   font-weight: bold;
+  filter: drop-shadow(.1rem .1rem .1rem rgb(217, 110, 108));
 }
 
 button:hover {
-  padding: 11px 21px 9px 21px ;
+  padding: 11px 21px 9px 23px;
   border-bottom: 3px solid rgb(217, 110, 108);
   border-right: 3px solid rgb(217, 110, 108);
   border-left: 1px solid rgb(217, 110, 108);
