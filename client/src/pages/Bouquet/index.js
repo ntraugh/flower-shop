@@ -10,11 +10,9 @@ import "./bouquet.css"
 const BouquetSingle = () => {
   const { id } = useParams();
   const [state, dispatch] = useStoreContext();
-  console.log(id);
   const { loading, data } = useQuery(QUERY_BOUQUET, {
     variables: { bouquetId: id }
   });
-  console.log(data);
   const bouquet = data?.bouquet || {};
 
   if (loading) {

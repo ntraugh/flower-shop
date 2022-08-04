@@ -1,4 +1,3 @@
-
 import { gql } from '@apollo/client';
 
 export const QUERY_USERS = gql`
@@ -28,8 +27,11 @@ query AllBouquets($occasionId: ID!) {
     description
     image
     price
-    featured
     _id
+    occasion {
+      _id
+      name
+    }
   }
 }
 `;
@@ -50,9 +52,11 @@ query Bouquet($bouquetId: ID!) {
 
 export const QUERY_OCCASIONS = gql`
 query occasions {
-_id
-name
-description 
+  occasions {
+    _id
+    name
+    image
+  }
 }`;
 
 
