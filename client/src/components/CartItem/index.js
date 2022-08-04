@@ -43,27 +43,27 @@ const CartItem = ({ item }) => {
       <div>
         <img
           src={item.image}
-          alt=""
+          alt={item.name}
         />
       </div>
-      <div>
-        <div>{item.name} — ${item.price}</div>
+      <div className="cartItemPrice">
+        <div className="cartItemTitle">{item.name}</div>
         <div className="productQty">
-          <span id="qtyLabel">Qty:</span>
+          <span className="qtyLabel">Qty:</span>
           <input
             type="number"
             placeholder="1"
             value={item.purchaseQuantity}
             onChange={onChange}
-
           />
-          <span
+          <button
             onClick={() => removeFromCart(item)}
-            id="deleteBtn"
+            className="deleteBtn"
           >
             X
-          </span>
+          </button>
         </div>
+        <div>${item.price}</div>
       </div>
     </div>
   );

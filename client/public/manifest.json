@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Flower Shop",
+  "name": "An Amazing Flower Shop",
+  "description": "This website was created as a final project in UNCC Bootcamp 2022.",
   "icons": [
     {
       "src": "favicon.ico",
