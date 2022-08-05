@@ -78,7 +78,7 @@ function App() {
           <Header page={page} setPage={setPage}/>
           <div id='mainSection' style={{flexGrow: "1"}}>
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<Home setPage={setPage}/>} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/me" element={<Profile />} />
@@ -87,7 +87,7 @@ function App() {
               <Route path="/occasion/:id" element={<BouquetList />} />
               <Route path="/bouquet/:id" element={<Bouquet />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/cart" element={<Cart />} />
+              <Route path="/cart" element={<Cart setPage={setPage}/>} />
               <Route path="/success" element={<Success setPage={setPage}/>} />
             </Routes>
           </div>
