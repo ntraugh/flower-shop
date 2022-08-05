@@ -21,7 +21,7 @@ const Footer = (props) => {
           <a href="https://www.google.com/maps/@35.5043075,-80.9124993,12.04z">1763 Rose Lane. Charlotte, NC</a>
           </li>
           <li className='listItem'>
-            <Link to="/Contact" onClick={() => props.setPage("Flower Shop | Contact")}>Contact Us</Link>
+            <Link to="/Contact" onClick={() => props.setPage("Bouquet Now | Contact")}>Contact Us</Link>
           </li>
           <li className='listItem' id='ig'>
             <a href='https://www.instagram.com/flowerpuns/' alt='Instagram'>

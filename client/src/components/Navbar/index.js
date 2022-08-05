@@ -33,9 +33,9 @@ function Navbar({ page, setPage }) {
         <li>
           <Link
             to="/"
-            onClick={() => setPage("Flower Shop | Home")}
+            onClick={() => setPage("Bouquet Now | Home")}
             // Disables Link if the user is on that page
-            style={"Flower Shop | Home" === page ? ({ color: "rgb(246, 189, 96)"}): null}
+            style={"Bouquet Now | Home" === page ? ({ color: "rgb(246, 189, 96)"}): null}
           >
             Home
           </Link>
@@ -43,8 +43,8 @@ function Navbar({ page, setPage }) {
         <li>
           <Link
             to="/occasion"
-            onClick={() => setPage("Flower Shop | Shop")}
-            style={"Flower Shop | Shop" === page ? ({ color: "rgb(246, 189, 96)"}): null}
+            onClick={() => setPage("Bouquet Now | Shop")}
+            style={"Bouquet Now | Shop" === page ? ({ color: "rgb(246, 189, 96)"}): null}
           >
             Occasions
           </Link>
@@ -52,8 +52,8 @@ function Navbar({ page, setPage }) {
         <li>
           <Link
             to="/contact"
-            onClick={() => setPage("Flower Shop | Contact")}
-            style={"Flower Shop | Contact" === page ? ({ color: "rgb(246, 189, 96)"}): null}
+            onClick={() => setPage("Bouquet Now | Contact")}
+            style={"Bouquet Now | Contact" === page ? ({ color: "rgb(246, 189, 96)"}): null}
           >
             Contact Us
           </Link>
@@ -93,9 +93,9 @@ function Navbar({ page, setPage }) {
         <li>
           <Link
             to="/"
-            onClick={() => setPage("Flower Shop | Home")}
+            onClick={() => setPage("Bouquet Now | Home")}
             // Disables Link if the user is on that page
-            style={"Flower Shop | Home" === page ? ({ color: "rgb(246, 189, 96)"}): null}
+            style={"Bouquet Now | Home" === page ? ({ color: "rgb(246, 189, 96)"}): null}
           >
             Home
           </Link>
@@ -103,9 +103,9 @@ function Navbar({ page, setPage }) {
         <li>
           <Link
             to="/login"
-            onClick={() => setPage("Flower Shop | Login")}
+            onClick={() => setPage("Bouquet Now | Login")}
             // Disables Link if the user is on that page
-            style={"Flower Shop | Login" === page ? ({ color: "rgb(246, 189, 96)"}): null}
+            style={"Bouquet Now | Login" === page ? ({ color: "rgb(246, 189, 96)"}): null}
           >
             Login
           </Link>
@@ -113,8 +113,8 @@ function Navbar({ page, setPage }) {
         <li>
           <Link
             to="/signup"
-            onClick={() => setPage("Flower Shop | Sign up")}
-            style={"Flower Shop | Sign up" === page ? ({ color: "rgb(246, 189, 96)"}): null}
+            onClick={() => setPage("Bouquet Now | Sign up")}
+            style={"Bouquet Now | Sign up" === page ? ({ color: "rgb(246, 189, 96)"}): null}
           >
             Sign up
           </Link>
@@ -122,8 +122,8 @@ function Navbar({ page, setPage }) {
         <li>
           <Link
             to="/occasion"
-            onClick={() => setPage("Flower Shop | Shop")}
-            style={"Flower Shop | Shop" === page ? ({ color: "rgb(246, 189, 96)"}): null}
+            onClick={() => setPage("Bouquet Now | Shop")}
+            style={"Bouquet Now | Shop" === page ? ({ color: "rgb(246, 189, 96)"}): null}
 
           >
             Occasions
@@ -132,8 +132,8 @@ function Navbar({ page, setPage }) {
         <li>
           <Link
             to="/contact"
-            onClick={() => setPage("Flower Shop | Contact")}
-            style={"Flower Shop | Contact" === page ? ({ color: "rgb(246, 189, 96)"}): null}
+            onClick={() => setPage("Bouquet Now | Contact")}
+            style={"Bouquet Now | Contact" === page ? ({ color: "rgb(246, 189, 96)"}): null}
 
           >
             Contact Us

@@ -49,20 +49,20 @@ const client = new ApolloClient({
 });
 
 function App() {
-  const [page, setPage] = useState("Flower Shop");
+  const [page, setPage] = useState("Bouquet Now");
   let path = window.location.pathname;
   
   // sets correct page name upon reload
   useEffect(() => {
-    if (path === "/" && page !=="Flower Shop | Home") setPage("Flower Shop | Home");
-    else if (path === "/login" && page !=="Flower Shop | Login") setPage("Flower Shop | Login");
-    else if (path === "/signup" && page !=="Flower Shop | Sign Up") setPage("Flower Shop | Sign Up");
-    else if (path === "/me" && page !=="Flower Shop | Profile") setPage("Flower Shop | Profile");
-    else if (path === "/occasion" && page !=="Flower Shop | Shop") setPage("Flower Shop | Shop");
-    else if (path === "/contact" && page !=="Flower Shop | Contact") setPage("Flower Shop | Contact Us");
-    else if (path === "/cart" && page !=="Flower Shop | Checkout") setPage("Flower Shop | Checkout");
-    else if (path === "/success" && page !=="Flower Shop | Success") setPage("Flower Shop | Success");
-    else if (page !=="Flower Shop") setPage("Flower Shop");
+    if (path === "/" && page !=="Bouquet Now | Home") setPage("Bouquet Now | Home");
+    else if (path === "/login" && page !=="Bouquet Now | Login") setPage("Bouquet Now | Login");
+    else if (path === "/signup" && page !=="Bouquet Now | Sign Up") setPage("Bouquet Now | Sign Up");
+    else if (path === "/me" && page !=="Bouquet Now | Profile") setPage("Bouquet Now | Profile");
+    else if (path === "/occasion" && page !=="Bouquet Now | Shop") setPage("Bouquet Now | Shop");
+    else if (path === "/contact" && page !=="Bouquet Now | Contact") setPage("Bouquet Now | Contact Us");
+    else if (path === "/cart" && page !=="Bouquet Now | Checkout") setPage("Bouquet Now | Checkout");
+    else if (path === "/success" && page !=="Bouquet Now | Success") setPage("Bouquet Now | Success");
+    else if (page !=="Bouquet Now") setPage("Bouquet Now");
   }, []);
 
   // Changes document title according to pathname
