@@ -8,7 +8,7 @@ function About() {
         <h2>About Us</h2>
         </div>
         <div className="about">
-            <div>Welcome to the Flower Shop! We are a certified flower dealer and lookin to slang some pollen at ya. We're a group of four students passionate about flowers, nature, and spreading color! One day while hiking through the forest, we couldn't help but notice the amazing aroma of all the wildflowers. We thought it would be great to bring that experience to everyone. So we did just that, let everyone stop to smell the roses.</div>
+            <div>Welcome to the Bouquet Now! We are a certified flower dealer and lookin to slang some pollen at ya. We're a group of four students passionate about flowers, nature, and spreading color! One day while hiking through the forest, we couldn't help but notice the amazing aroma of all the wildflowers. We thought it would be great to bring that experience to everyone. So we did just that, let everyone stop to smell the roses.</div>
             <div>
             We aren’t dandelion when we say that our arrangements are simply iris-istible! It is our guarantee, and if you aren’t head clover heels for your arrangement, simply let us know and we will make it right.</div>
             <div>

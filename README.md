@@ -1,4 +1,4 @@
-# Flower Shop
+# Bouquet Now
 
 [LIVE SITE](https://bouquetnow.herokuapp.com/)
 
@@ -14,7 +14,7 @@
 
 ## DESCRIPTION
 
-The Flower Shop is an ecommerce website for a flower shop. This shop will sell bouquets and arrangements by occasion: Birthday, Anniversary, Congratulations, Get Well Soon, Love & Romance and Thank You. Users can make accounts when purchasing their arrangements, edit their carts, purchase the items in their carts, and log back into their accounts when they revisit the site.
+The Bouquet Now is an ecommerce website for a Bouquet Now. This shop will sell bouquets and arrangements by occasion (birthday, anniversary, congratulations, get well soon, love and romance and thank you). Users can make accounts when purchasing their arrangements, edit their carts, purchase the items in their carts, and log back into their accounts when they revisit the site.
 
 We will incorporate the Stripe payment platform for our shopping cart, and IndexDB to store the cart information. Footer displays hours, location, a way to contact us and some social media platforms. The location, contact us and social icons are working links. Custom Arrangements and arrangements for larger occasions (weddings, funerals, proms) are optional inclusions to the website if we have time.
 

@@ -27,18 +27,18 @@ const Header = (props) => {
     <>
    <div className='headerInfo'>
     <h1>
-      <Link to="/" onClick={() => props.setPage("Flower Shop | Home")}>
+      <Link to="/" onClick={() => props.setPage("Bouquet Now | Home")}>
       <span className='headerImg'>
         <img src='/images/favicon-32x32.png' alt='logo'></img>
-      </span>Flower Shop
+      </span>Bouquet Now
       </Link>
     </h1>
       <div className='cartIcon'>
         <Link to='/cart'>
           <FaShoppingCart
             size={40}
-            onClick={() => props.setPage("Flower Shop | Checkout")}
-            style={"Flower Shop | Checkout" === props.page ? ({ color: "rgb(246, 189, 96)"}): null}
+            onClick={() => props.setPage("Bouquet Now | Checkout")}
+            style={"Bouquet Now | Checkout" === props.page ? ({ color: "rgb(246, 189, 96)"}): null}
             /> 
           <p className='cartNoti'>
             { 

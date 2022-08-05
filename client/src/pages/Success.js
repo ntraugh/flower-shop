@@ -35,7 +35,7 @@ function Success(props) {
           <Link 
             to="/"
             style={{ cursor: "pointer", padding: "4px", border: "solid 4px "}}
-            onClick={() => props.setPage("Flower Shop | Home")}>
+            onClick={() => props.setPage("Bouquet Now | Home")}>
             Back to Home Page
           </Link>
         </div>
