@@ -2,11 +2,11 @@ import React from 'react';
 import FeaturedItemsList from '../components/FeaturedItemsList';
 import Hero from "../components/Hero"
 
-const Home = () => {
+const Home = (props) => {
 
   return (
     <main>
-      <Hero />
+      <Hero {...props}/>
       <FeaturedItemsList />
     </main>
   );
