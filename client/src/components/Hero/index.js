@@ -13,7 +13,7 @@ const Hero = () => {
             alt="hero"></img>
         </div>
         <div className='content'>
-        <h1 style={{}}>Flower Shop</h1>
+        <h1 style={{}}>Bouquet Now</h1>
             <div>
                 <Link to="/occasion"><button style={{cursor: "pointer"}}>
                   Shop Now</button> 
