@@ -13,7 +13,7 @@ import "./Cart.css";
 
 const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
-const Cart = () => {
+const Cart = (props) => {
   const [state, dispatch] = useStoreContext();
   const [getCheckout, { loading, data }] = useLazyQuery(QUERY_CHECKOUT);
 
@@ -90,7 +90,12 @@ const Cart = () => {
             You haven't added anything to your cart yet!
           </h3>
           <div style={{margin: "2rem"}}>
-            <Link to="/occasion" style={{ cursor: "pointer", padding: "8px", border: "solid 4px "}}>Shop Now</Link>
+            <Link
+              to="/occasion" 
+              style={{ cursor: "pointer", padding: "8px", border: "solid 4px "}}
+              onClick={() => props.setPage("Flower Shop | Shop")}>
+                Shop Now
+            </Link>
           </div>
         </section>
       )}

@@ -1,6 +1,6 @@
 # Bouquet Now
 
-[LIVE SITE]()
+[LIVE SITE](https://bouquetnow.herokuapp.com/)
 
 [REPOSITORY](https://github.com/ntraugh/flower-shop)
 
@@ -18,7 +18,7 @@ The Bouquet Now is an ecommerce website for a Bouquet Now. This shop will sell b
 
 We will incorporate the Stripe payment platform for our shopping cart, and IndexDB to store the cart information. Footer displays hours, location, a way to contact us and some social media platforms. The location, contact us and social icons are working links. Custom Arrangements and arrangements for larger occasions (weddings, funerals, proms) are optional inclusions to the website if we have time.
 
-For this site we utilized: React, Concurrently, Stripe payment platform, Apollo, Express, GraphQl, Jsonwebtoken (JWT), Formspree, MongoDb Mongoose, Compass, Bcrypt and Nodemon.
+For this site we utilized: React, Concurrently, Stripe payment platform, Apollo, Express, GraphQl, Jsonwebtoken (JWT), Formspree, MongoDb, Mongoose, Compass, Bcrypt and Nodemon.
 
 
 ## USAGE
@@ -29,7 +29,6 @@ If you want to reach out for more information, please click the Contact Us link 
 If you love us, make sure you follow us on Instagram @flowerpuns and leave us an awesome review on yelp! 
 
 Before leaving our site, please make sure you log out! 
-
 
 ## Authors and Acknowledgements
 Mary Cancellieri | Lacy Nunally | Hans Reichgelt | NateTraugh
@@ -45,6 +44,6 @@ Mary Cancellieri | Lacy Nunally | Hans Reichgelt | NateTraugh
 
 ## RESOURCES
 
-1. [LIVE SITE]()
+1. [LIVE SITE](https://bouquetnow.herokuapp.com/)
 
 2. [REPOSITORY](https://github.com/ntraugh/flower-shop)

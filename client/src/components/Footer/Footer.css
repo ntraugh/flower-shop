@@ -39,7 +39,25 @@ footer a {
     font-weight: 600;
 }
 
+.tooltip {
+    position: relative;
+}
 
+.tooltip a span {
+    display: none;
+    color: #FFFFFF;
+}
+
+.tooltip a:hover span {
+    display: block;
+    position: absolute;
+    width: 500px;
+    height: 400px;
+    left: -200px;
+    top: -420px;
+    color: #FFFFFF;
+    padding: 0 5px;
+}
 
 @media screen and (max-width: 1053px) {
     .footerNav {
