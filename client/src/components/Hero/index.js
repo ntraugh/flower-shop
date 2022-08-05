@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 
 
 
-const Hero = () => {
+const Hero = (props) => {
   return (
     <div className='hero'>
         <div className='mask'>
@@ -15,8 +15,12 @@ const Hero = () => {
         <div className='content'>
         <h1 style={{}}>Flower Shop</h1>
             <div>
-                <Link to="/occasion"><button style={{cursor: "pointer"}}>
-                  Shop Now</button> 
+                <Link 
+                  to="/occasion"
+                  onClick={() => props.setPage("Flower Shop | Shop")}>
+                <button style={{cursor: "pointer"}}>
+                  Shop Now
+                </button> 
                 </Link>
             </div>
         </div>

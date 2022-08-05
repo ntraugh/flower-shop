@@ -10,8 +10,8 @@ const Footer = (props) => {
   return (
     <footer>
       <ul className='footerNav'>
-        <li className='listItem' id='hours'>
-          Monday-Friday: 8AM - 6PM
+        <li className='listItem tooltip' id='hours'>
+          Monday-<a href="https://spongebob.fandom.com/wiki/List_of_SpongeBob_fan_sites">Friday<span style={{backgroundImage: `url(/images/spongebobpetals.png)`}}></span></a>: 8AM - 6PM
           <br></br>
           Saturday: 10AM - 8PM
           <br></br>

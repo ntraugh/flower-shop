@@ -7,3 +7,7 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
+.singleOccContainer h2 {
+    font-size: 40px;
+}
