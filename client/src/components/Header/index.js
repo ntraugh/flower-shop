@@ -50,7 +50,7 @@ const Header = (props) => {
         </Link>
       </div>
     </div>
-   <Navbar {...props} />
+    <Navbar {...props} />
     </>
   );
 };

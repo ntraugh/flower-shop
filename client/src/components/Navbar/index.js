@@ -144,7 +144,7 @@ function Navbar({ page, setPage }) {
         {click ? (
           <FaTimes size={30} style={{ color: "white" }} />
         ) : (
-          <FaBars size={20} style={{ color: "rgb(242, 132, 130)" }} />
+          <FaBars size={30} style={{ color: "rgb(242, 132, 130)" }} />
         )}
       </div>
     </div>
