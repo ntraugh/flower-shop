@@ -24,15 +24,15 @@ const Header = (props) => {
   }, [cart.length, dispatch]);
 
   return (
-    <>
+  <header id="movingHeader">
    <div className='headerInfo'>
-    <h1>
-      <Link to="/" onClick={() => props.setPage("Bouquet Now | Home")}>
-      <span className='headerImg'>
-        <img src='/images/favicon-32x32.png' alt='logo'></img>
-      </span>Bouquet Now
-      </Link>
-    </h1>
+      <h1>
+        <Link to="/" onClick={() => props.setPage("Bouquet Now | Home")}>
+        <span className='headerImg'>
+          <img src='/images/favicon-32x32.png' alt='logo'></img>
+        </span>Bouquet Now
+        </Link>
+      </h1>
       <div className='cartIcon'>
         <Link to='/cart'>
           <FaShoppingCart
@@ -51,7 +51,7 @@ const Header = (props) => {
       </div>
     </div>
     <Navbar {...props} />
-    </>
+  </header>
   );
 };
 

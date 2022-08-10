@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaBars, FaTimes, FaShoppingCart } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 import Auth from '../../utils/auth';
 import "./NavbarStyle.css";
 
@@ -27,14 +27,13 @@ function Navbar({ page, setPage }) {
   if (Auth.loggedIn()) {
     return (
       <>
-        <div className={color ? "header header-bg" : "header"}>
+      <div className={color ? "header header-bg" : "header"}>
       {/* if else for hamburger menu */}
       <ul className={click ? "nav-menu active" : "nav-menu"}>
         <li>
           <Link
             to="/"
             onClick={() => setPage("Bouquet Now | Home")}
-            // Disables Link if the user is on that page
             style={"Bouquet Now | Home" === page ? ({ color: "rgb(246, 189, 96)"}): null}
           >
             Home
