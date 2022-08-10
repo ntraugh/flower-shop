@@ -1,71 +1,71 @@
 .header {
-    --yellow: rgb(246, 189, 96);
-    --offwhite: rgb(247, 237, 226);
-    --lightpink: rgb(245, 202, 195);
-    --pink: rgb(242, 132, 130);
-    --red: rgb(188, 44, 26);
-    --black: rgb(25, 23, 22);
-  }
+--yellow: rgb(246, 189, 96);
+--offwhite: rgb(247, 237, 226);
+--lightpink: rgb(245, 202, 195);
+--pink: rgb(242, 132, 130);
+--red: rgb(188, 44, 26);
+--black: rgb(25, 23, 22);
+}
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1rem;
+width: 100%;
 }
 
 
 .nav-menu {
-    display: flex;
+display: flex;
 }
 .nav-menu li {
-    padding: 0 1rem;
+padding: 0 1rem;
 }
 
 .nav-menu li a {
-    font-size: 1.2rem;
-    font-weight: 500;
+font-size: 1.2rem;
+font-weight: 500;
 
 }
 
 .nav-menu li a:hover {
-    color: var(--red);
-    transition: 0.5s;
+color: var(--red);
+transition: 0.5s;
 }
 
 .hamburger {
-    display: none;
+display: none;
 }
 
 
 @media screen and (max-width: 1040px) {
-    .nav-menu {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.9);
-        position: absolute;
-        top: 0;
-        left: -120%;
-        transition: 0.5s;
-    }
+.nav-menu {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 0;
+    left: -120%;
+    transition: 0.5s;
+}
 
-    .nav-menu.active {
-        left: 0;
-    }
-    .nav-menu li {
-        padding: 2rem 0; 
-    }
+.nav-menu.active {
+    left: 0;
+}
+.nav-menu li {
+    padding: 2rem 0; 
+}
 
-    .nav-menu li a {
-        font-size: 2.5rem;
-    }
+.nav-menu li a {
+    font-size: 2.5rem;
+}
 
-    .hamburger {
-        display: initial;
-        cursor: pointer;
-    }
+.hamburger {
+    display: initial;
+    cursor: pointer;
+}
 }
