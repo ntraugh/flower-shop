@@ -1,11 +1,14 @@
+#movingHeader {
+    z-index: 15;
+    top: 0;
+    position: sticky;
+    background-color: rgb(247, 237, 226);
+}
+   
 .headerInfo {
     display: flex;
     justify-content: space-between;
-    padding: 1rem 1rem 3rem 1rem;
-    position: sticky;
-    top: 0;
-    z-index: 8;
-    background-color: rgb(247, 237, 226);
+    padding: 1rem 1rem 0 1rem;
 }
 
 .cartIcon {

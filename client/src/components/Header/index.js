@@ -7,25 +7,25 @@ import "./HeaderStyle.css"
 import { idbPromise } from '../../utils/helpers';
 
 const Header = (props) => {
-  // Using Global State to get cart array
-  const [{ cart }, dispatch] = useStoreContext();
-  const [cartArray, setCartArray] = useState(cart);
+// Using Global State to get cart array
+const [{ cart }, dispatch] = useStoreContext();
+const [cartArray, setCartArray] = useState(cart);
 
-  // If the cart cannot be recieved from Global State, array will be provided by idb
-  useEffect(() => {
-    async function getCart() {
-      const newCart = await idbPromise('cart', 'get');
-      setCartArray(newCart);
-    }
+// If the cart cannot be recieved from Global State, array will be provided by idb
+useEffect(() => {
+  async function getCart() {
+    const newCart = await idbPromise('cart', 'get');
+    setCartArray(newCart);
+  }
 
-    if (!cart.length) {
-      getCart();
-    }
-  }, [cart.length, dispatch]);
+  if (!cart.length) {
+    getCart();
+  }
+}, [cart.length, dispatch]);
 
-  return (
-    <>
-   <div className='headerInfo'>
+return (
+<header id="movingHeader">
+  <div className='headerInfo'>
     <h1>
       <Link to="/" onClick={() => props.setPage("Bouquet Now | Home")}>
       <span className='headerImg'>
@@ -33,26 +33,26 @@ const Header = (props) => {
       </span>Bouquet Now
       </Link>
     </h1>
-      <div className='cartIcon'>
-        <Link to='/cart'>
-          <FaShoppingCart
-            size={40}
-            onClick={() => props.setPage("Bouquet Now | Checkout")}
-            style={"Bouquet Now | Checkout" === props.page ? ({ color: "rgb(246, 189, 96)"}): null}
-            /> 
-          <p className='cartNoti'>
-            { 
-              // reduce cart to get total purchases
-              cart?.reduce((p, c) => p + c.purchaseQuantity, 0) ||  
-              cartArray?.reduce((p, c) => p + c.purchaseQuantity, 0)
-            }
-          </p>
-        </Link>
-      </div>
+    <div className='cartIcon'>
+      <Link to='/cart'>
+        <FaShoppingCart
+          size={40}
+          onClick={() => props.setPage("Bouquet Now | Checkout")}
+          style={"Bouquet Now | Checkout" === props.page ? ({ color: "rgb(246, 189, 96)"}): null}
+          /> 
+        <p className='cartNoti'>
+          { 
+            // reduce cart to get total purchases
+            cart?.reduce((p, c) => p + c.purchaseQuantity, 0) ||  
+            cartArray?.reduce((p, c) => p + c.purchaseQuantity, 0)
+          }
+        </p>
+      </Link>
     </div>
-    <Navbar {...props} />
-    </>
-  );
+  </div>
+  <Navbar {...props} />
+</header>
+);
 };
 
 export default Header;

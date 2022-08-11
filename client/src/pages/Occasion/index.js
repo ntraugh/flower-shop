@@ -9,8 +9,6 @@ function Occasion() {
 
   const stuff = data?.occasions || [];
 
-  console.log(stuff);
-
   if (loading) {
     return (
       <div>

@@ -1,14 +1,10 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { QUERY_FEATURED } from "../../utils/queries"
 import { useQuery } from '@apollo/client';
 import FeaturedItems from '../FeaturedItems';
-import { idbPromise } from '../../utils/helpers';
-import { useStoreContext } from '../../utils/GlobalState';
 import "./FeaturedItemsList.css"
 
 const FeaturedItemsList = () => {
-    const [state, dispatch] = useStoreContext();
-
     const { loading, data } = useQuery( QUERY_FEATURED );
 
     if(loading){
@@ -36,23 +32,3 @@ const FeaturedItemsList = () => {
 }
 
 export default FeaturedItemsList
-
-
-    // useEffect(() => {
-    //     if (data) {
-    //       dispatch({
-    //         type: QUERY_FEATURED,
-    //         products: data.featured,
-    //       });
-    //       data?.featured.forEach((product) => {
-    //         idbPromise('products', 'put', product);
-    //       });
-    //     } else if (!loading) {
-    //       idbPromise('products', 'get').then((products) => {
-    //         dispatch({
-    //           type: QUERY_FEATURED,
-    //           products: products,
-    //         });
-    //       });
-    //     }
-    //   }, [data, loading, dispatch]);
