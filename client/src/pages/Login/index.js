@@ -7,7 +7,7 @@ import "./Login.css"
 
 import Auth from '../../utils/auth';
 
-const Login = () => {
+const Login = ({ setPage }) => {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error, data }] = useMutation(LOGIN_USER);
 
@@ -80,6 +80,11 @@ const Login = () => {
       <h2>Login</h2>
       <div>
         {renderForm()}
+        {<p style={{paddingTop: "1rem", fontWeight: "bold"}}>
+          <Link to="/signup" onClick={() => setPage("Bouquet Now | Sign up")}>
+            Need to Sign Up?
+          </Link>
+        </p>}
         {error && <div>{error.message}</div>}
       </div>
     </main>

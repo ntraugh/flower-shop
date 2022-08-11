@@ -8,7 +8,7 @@ import "./Signup.css"
 
 import Auth from '../../utils/auth';
 
-const Signup = () => {
+const Signup = ({ setPage }) => {
   const [formState, setFormState] = useState({
     username: '',
     email: '',
@@ -83,6 +83,11 @@ const Signup = () => {
       <h2>Sign Up</h2>
       <div>
         {renderForm()}
+        {<p style={{paddingTop: "1rem", fontWeight: "bold"}}>
+          <Link to="/login" onClick={() => setPage("Bouquet Now | Login")}>
+            Already Signed Up?
+          </Link>
+        </p>}
         {error && <div>{error.message}</div>}
       </div>
     </main>

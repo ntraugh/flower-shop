@@ -79,8 +79,8 @@ function App() {
           <div id='mainSection' style={{flexGrow: "1"}}>
             <Routes>
               <Route path="/" element={<Home setPage={setPage}/>} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/signup" element={<Signup />} />
+              <Route path="/login" element={<Login setPage={setPage} />} />
+              <Route path="/signup" element={<Signup setPage={setPage}/>} />
               <Route path="/me" element={<Profile />} />
               <Route path="/users/:id" element={<Profile />} />
               <Route path="/occasion" element={<Occasion />} />
