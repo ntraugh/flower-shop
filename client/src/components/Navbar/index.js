@@ -34,7 +34,10 @@ if (Auth.loggedIn()) {
         <Link
           to="/"
           onClick={() => setPage("Bouquet Now | Home")}
-          style={"Bouquet Now | Home" === page ? ({ color: "rgb(246, 189, 96)"}): null}
+          style={"Bouquet Now | Home" === page ? ({ 
+            color: "rgb(246, 189, 96)", 
+            filter: "drop-shadow(.05rem .05rem .03rem rgba(244,144,12,255))"
+          }): null}
         >
           Home
         </Link>
@@ -43,7 +46,10 @@ if (Auth.loggedIn()) {
         <Link
           to="/occasion"
           onClick={() => setPage("Bouquet Now | Shop")}
-          style={"Bouquet Now | Shop" === page ? ({ color: "rgb(246, 189, 96)"}): null}
+          style={"Bouquet Now | Shop" === page ? ({ 
+            color: "rgb(246, 189, 96)", 
+            filter: "drop-shadow(.05rem .05rem .03rem rgba(244,144,12,255))"
+          }): null}
         >
           Occasions
         </Link>
@@ -52,7 +58,10 @@ if (Auth.loggedIn()) {
         <Link
           to="/contact"
           onClick={() => setPage("Bouquet Now | Contact")}
-          style={"Bouquet Now | Contact" === page ? ({ color: "rgb(246, 189, 96)"}): null}
+          style={"Bouquet Now | Contact" === page ? ({ 
+            color: "rgb(246, 189, 96)", 
+            filter: "drop-shadow(.05rem .05rem .03rem rgba(244,144,12,255))"
+          }): null}
         >
           Contact Us
         </Link>
@@ -90,7 +99,10 @@ return (
         <Link
           to="/"
           onClick={() => setPage("Bouquet Now | Home")}
-          style={"Bouquet Now | Home" === page ? ({ color: "rgb(246, 189, 96)"}): null}
+          style={"Bouquet Now | Home" === page ? ({ 
+            color: "rgb(246, 189, 96)", 
+            filter: "drop-shadow(.05rem .05rem .03rem rgba(244,144,12,255))"
+          }): null}
         >
           Home
         </Link>
@@ -99,7 +111,10 @@ return (
         <Link
           to="/login"
           onClick={() => setPage("Bouquet Now | Login")}
-          style={"Bouquet Now | Login" === page ? ({ color: "rgb(246, 189, 96)"}): null}
+          style={"Bouquet Now | Login" === page ? ({ 
+            color: "rgb(246, 189, 96)", 
+            filter: "drop-shadow(.05rem .05rem .03rem rgba(244,144,12,255))"
+          }): null}
         >
           Login
         </Link>
@@ -108,7 +123,10 @@ return (
         <Link
           to="/signup"
           onClick={() => setPage("Bouquet Now | Sign up")}
-          style={"Bouquet Now | Sign up" === page ? ({ color: "rgb(246, 189, 96)"}): null}
+          style={"Bouquet Now | Sign up" === page ? ({ 
+            color: "rgb(246, 189, 96)", 
+            filter: "drop-shadow(.05rem .05rem .03rem rgba(244,144,12,255))"
+          }): null}
         >
           Sign up
         </Link>
@@ -117,7 +135,10 @@ return (
         <Link
           to="/occasion"
           onClick={() => setPage("Bouquet Now | Shop")}
-          style={"Bouquet Now | Shop" === page ? ({ color: "rgb(246, 189, 96)"}): null}
+          style={"Bouquet Now | Shop" === page ? ({ 
+            color: "rgb(246, 189, 96)", 
+            filter: "drop-shadow(.05rem .05rem .03rem rgba(244,144,12,255))"
+          }): null}
 
         >
           Occasions
@@ -127,7 +148,10 @@ return (
         <Link
           to="/contact"
           onClick={() => setPage("Bouquet Now | Contact")}
-          style={"Bouquet Now | Contact" === page ? ({ color: "rgb(246, 189, 96)"}): null}
+          style={"Bouquet Now | Contact" === page ? ({ 
+            color: "rgb(246, 189, 96)", 
+            filter: "drop-shadow(.05rem .05rem .03rem rgba(244,144,12,255))"
+          }): null}
 
         >
           Contact Us
