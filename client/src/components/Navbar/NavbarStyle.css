@@ -67,5 +67,7 @@ display: none;
 .hamburger {
     display: initial;
     cursor: pointer;
+    z-index: 15;
+    padding-top: .1rem;
 }
 }
